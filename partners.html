@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パートナー募集 | 札幌すごいAIハッカソン 2026夏</title>
+    <meta name="description" content="札幌すごいAIハッカソン 2026夏のパートナーを募集しています。一緒に札幌のAI駆動開発文化を育てませんか？">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="パートナー募集 | 札幌すごいAIハッカソン 2026夏">
+    <meta property="og:description" content="札幌すごいAIハッカソン 2026夏のパートナーを募集しています。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack-2026-summer.sugoiai.org/partners.html">
+    <meta property="og:site_name" content="札幌すごいAIハッカソン 2026夏">
+    <meta property="og:image" content="https://hack-2026-summer.sugoiai.org/images/logot.png">
+    <meta property="og:locale" content="ja_JP">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="パートナー募集 | 札幌すごいAIハッカソン 2026夏">
+    <meta name="twitter:description" content="札幌すごいAIハッカソン 2026夏のパートナーを募集しています。">
+    <meta name="twitter:image" content="https://hack-2026-summer.sugoiai.org/images/logot.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logot.png">
+    <link rel="apple-touch-icon" href="images/logot.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* ─── Page-level layout ─── */
+        .sp-hero {
+            min-height: 55vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at center top, #1a1400 0%, var(--dark-bg) 65%);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sp-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255, 214, 0, 0.02) 2px,
+                rgba(255, 214, 0, 0.02) 4px
+            );
+            pointer-events: none;
+        }
+
+        .sp-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sp-back-link {
+            display: inline-block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: var(--spacing-md);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .sp-back-link:hover {
+            color: var(--film-cyan);
+            transform: translateX(-4px);
+        }
+
+        .sp-hero-description {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-top: var(--spacing-md);
+            max-width: 600px;
+        }
+
+        /* ─── Past event ─── */
+        .sp-plan-section {
+            background: var(--dark-surface);
+        }
+
+        .sp-past-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        @media (max-width: 768px) {
+            .sp-past-content { grid-template-columns: 1fr; }
+        }
+
+        .sp-video-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .sp-video-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .sp-video-iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .sp-past-image-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .sp-past-image {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* ─── Why sponsor ─── */
+        .sp-benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            max-width: 800px;
+            margin: var(--spacing-lg) auto 0;
+        }
+
+        .sp-benefit-row {
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: flex-start;
+        }
+
+        .sp-benefit-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+            flex-shrink: 0;
+            width: 3rem;
+            text-align: center;
+            padding-top: 0.2rem;
+        }
+
+        .sp-benefit-body h3 {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ─── Plan cards ─── */
+        .sp-plan-card {
+            max-width: 760px;
+            margin: var(--spacing-lg) auto 0;
+            background: var(--dark-elevated);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 214, 0, 0.15);
+        }
+
+        .sp-plan-header {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid rgba(255, 214, 0, 0.1);
+        }
+
+        .sp-tier-badge {
+            display: inline-block;
+            padding: 0.25rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+        }
+
+        .sp-badge-platinum {
+            background: rgba(255, 214, 0, 0.15);
+            color: #FFD600;
+            border: 1px solid rgba(255, 214, 0, 0.4);
+        }
+
+        .sp-tier-title {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .sp-tier-platinum { color: #FFD600; }
+        .sp-tier-gold     { color: #FFA500; }
+        .sp-tier-silver   { color: #A8A8A8; }
+
+        .sp-tier-icon { font-size: 1.5rem; }
+
+        .sp-plan-catch {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0.4rem 0 0.6rem;
+        }
+
+        .sp-plan-price {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 900;
+            color: #FFD600;
+            margin: 0.4rem 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .sp-price-gold   { color: #FFA500; }
+        .sp-price-silver { color: #A8A8A8; }
+
+        .sp-price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .sp-price-sep {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .sp-barter-note {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .sp-plan-tagline {
+            font-size: 0.97rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-top: 0.6rem;
+        }
+
+        .sp-plan-body {
+            padding: var(--spacing-lg);
+        }
+
+        .sp-benefits-heading {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* ─── Check list ─── */
+        .apply-list-check {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .apply-list-check li {
+            padding: 0.55rem 0 0.55rem 1.8rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+            line-height: 1.7;
+            border-bottom: 1px solid rgba(255, 214, 0, 0.07);
+        }
+
+        .apply-list-check li:last-child { border-bottom: none; }
+
+        .apply-list-check li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #FFD600;
+            font-weight: 900;
+        }
+
+        /* ─── Notes & plain list ─── */
+        .apply-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .apply-list li {
+            padding: 0.6rem 0 0.6rem 1.6rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            border-bottom: 1px solid rgba(255, 214, 0, 0.06);
+        }
+
+        .apply-list li:last-child { border-bottom: none; }
+
+        .apply-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--film-purple);
+        }
+
+        .apply-card {
+            background: var(--dark-elevated);
+            border: 1px solid rgba(255, 214, 0, 0.15);
+            border-radius: 12px;
+            padding: var(--spacing-lg);
+        }
+
+        /* ─── Platinum section bg ─── */
+        .sp-platinum {
+            background: linear-gradient(135deg, #0f0d00 0%, var(--dark-surface) 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="sp-hero">
+        <div class="container sp-hero-content">
+            <h1 class="section-title" style="margin-top: 0;">
+                <span class="title-en">BECOME A PARTNER</span>
+                <span class="title-ja">パートナー募集</span>
+            </h1>
+            <p class="sp-hero-description">
+                2時間で世界を変えようとする開発者たちの場に、<br>
+                一緒に立ちませんか。
+            </p>
+        </div>
+    </section>
+
+    <!-- Past Event -->
+    <section id="past-event" class="section sp-plan-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">PAST EVENT</span>
+                    <span class="title-ja">パートナー紹介のイメージ</span>
+                </h2>
+                <p class="section-description">
+                    札幌すごいAIまつり 2026冬での実施の様子。<br>
+                    パートナー企業・団体様を、会場とウェブサイトでご紹介しました。
+                </p>
+            </div>
+            <div class="sp-past-content">
+                <div class="sp-video-wrap">
+                    <p class="sp-video-label">パートナー紹介の様子（札幌すごいAIまつり 2026冬）</p>
+                    <iframe
+                        src="https://www.youtube.com/embed/KJ8rVP_wnto?start=1863"
+                        title="パートナー紹介イメージ"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        class="sp-video-iframe">
+                    </iframe>
+                </div>
+                <div class="sp-past-image-wrap">
+                    <p class="sp-video-label">当日のパートナー企業・団体様（札幌すごいAIまつり 2026冬）</p>
+                    <img src="images/partners.png" alt="パートナー企業・団体" class="sp-past-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Partner -->
+    <section id="why-partner" class="section overview">
+        <canvas class="film-grain-canvas"></canvas>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">WHY PARTNER</span>
+                    <span class="title-ja">パートナーになる意義</span>
+                </h2>
+            </div>
+            <div class="sp-benefits-list">
+                <div class="sp-benefit-row">
+                    <div class="sp-benefit-icon">⚡</div>
+                    <div class="sp-benefit-body">
+                        <h3>「その場で作り切る意志と実行力がある人」と出会える</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.97rem; line-height: 1.8;">
+                            本ハッカソンに集まるのは、作ったものを持ってくる人ではなく、
+                            その場でゼロから2時間で形にする意志を持った人たちです。
+                            アイデアを即座に決断し、AIと技術で動くものを作り切る——
+                            その実行力を、採用でも外注でも共創でも、ライブで確認できる場です。
+                        </p>
+                    </div>
+                </div>
+                <div class="sp-benefit-row">
+                    <div class="sp-benefit-icon">🚀</div>
+                    <div class="sp-benefit-body">
+                        <h3>AI駆動開発文化の「最初の旗」を、札幌に一緒に立てる</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.97rem; line-height: 1.8;">
+                            AI駆動開発（Vibe Coding）は、2026年のいま、開発の在り方そのものを塗り替えつつあります。
+                            誰が中心プレイヤーなのかまだ固まっていないからこそ、札幌から始めます。
+                            広告枠の購入ではなく、文化の発起人として記憶されるタイプの投資です。
+                        </p>
+                    </div>
+                </div>
+                <div class="sp-benefit-row">
+                    <div class="sp-benefit-icon">🎯</div>
+                    <div class="sp-benefit-body">
+                        <h3>全員が「当事者」の場に届く</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.97rem; line-height: 1.8;">
+                            会場に来る人も、SNSで見る人も、AIで何かを作っている・作りたい・作らせたい人だけです。
+                            マス広告の「なんとなく目に入る」露出とは質が違います。
+                            意思決定者と実行者に、深い文脈とともに届く。
+                            数で測れない種類のリーチを、パートナーシップは可能にします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platinum Sponsor -->
+    <section id="platinum-sponsor" class="section sp-plan-section sp-platinum">
+        <div class="container">
+            <div class="sp-plan-card" style="border-color: rgba(255, 214, 0, 0.35);">
+                <div class="sp-plan-header">
+                    <div class="sp-tier-badge sp-badge-platinum">限定2枠</div>
+                    <h2 class="sp-tier-title sp-tier-platinum">
+                        <span class="sp-tier-icon">💎</span>
+                        プラチナパートナー
+                    </h2>
+                    <p class="sp-plan-catch">賞に名前を刻み、開発者の記憶に残り続ける。</p>
+                    <p class="sp-plan-price">¥100,000</p>
+                    <p class="sp-plan-tagline">
+                        ゴールドの全特典に加えて、貴社名を冠した賞をハッカソンに創設できます。<br>
+                        受賞者の経歴に貴社名が残り続ける、広告では買えないブランディングです。
+                    </p>
+                </div>
+                <div class="sp-plan-body">
+                    <h3 class="sp-benefits-heading">特典内容</h3>
+                    <ul class="apply-list-check">
+                        <li><strong style="color: var(--film-cyan);">「審査員特別賞」を任意の名称・受賞コメントで授与できる権利（例：〇〇賞、〇〇社長賞 など）</strong></li>
+                        <li><strong style="color: var(--film-cyan);">現地での15秒〜60秒のCM放映（任意の長さ）</strong></li>
+                        <li>イベント開始時のパートナー紹介スライドで、ロゴと企業名を最上位で掲載し、口頭で紹介</li>
+                        <li>公式サイトへの企業名とロゴの掲載（最上位表示）</li>
+                        <li>希望者全員の札幌現地イベントご招待（一般席）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gold Sponsor -->
+    <section id="gold-sponsor" class="section overview">
+        <canvas class="film-grain-canvas"></canvas>
+        <div class="container">
+            <div class="sp-plan-card">
+                <div class="sp-plan-header">
+                    <h2 class="sp-tier-title sp-tier-gold">
+                        <span class="sp-tier-icon">🥇</span>
+                        ゴールドパートナー
+                    </h2>
+                    <p class="sp-plan-catch">スクリーンで、貴社の声を開発者に直接届ける。</p>
+                    <p class="sp-plan-price sp-price-gold">¥50,000</p>
+                    <p class="sp-plan-tagline">
+                        シルバーの全特典に加えて、大スクリーンで最大60秒のCMを放映。<br>
+                        AI駆動開発に感度の高い参加者に、深い文脈で自社を届けられます。
+                    </p>
+                </div>
+                <div class="sp-plan-body">
+                    <h3 class="sp-benefits-heading">特典内容</h3>
+                    <ul class="apply-list-check">
+                        <li><strong style="color: var(--film-cyan);">現地での15秒〜60秒のCM放映（任意の長さ）</strong></li>
+                        <li>イベント開会時の企業名・ロゴ紹介</li>
+                        <li>公式サイトへの企業名とロゴの掲載</li>
+                        <li>希望者全員の札幌現地イベントご招待（一般席）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Silver Sponsor -->
+    <section id="silver-sponsor" class="section sp-plan-section">
+        <div class="container">
+            <div class="sp-plan-card">
+                <div class="sp-plan-header">
+                    <h2 class="sp-tier-title sp-tier-silver">
+                        <span class="sp-tier-icon">🥈</span>
+                        シルバーパートナー
+                    </h2>
+                    <p class="sp-plan-catch">札幌のAI駆動開発文化を支えた名前として、記録に残る。</p>
+                    <div class="sp-price-row">
+                        <p class="sp-plan-price sp-price-silver">¥20,000</p>
+                        <span class="sp-price-sep">/</span>
+                        <p class="sp-barter-note">または同等のサービス等のご提供</p>
+                    </div>
+                    <p class="sp-plan-tagline">
+                        公式サイトと当日スクリーンに、貴社名・ロゴが並びます。<br>
+                        「最初から支えた企業」として、コミュニティに記録されます。
+                    </p>
+                </div>
+                <div class="sp-plan-body">
+                    <h3 class="sp-benefits-heading">特典内容</h3>
+                    <ul class="apply-list-check">
+                        <li>イベント開会時の企業名・ロゴ紹介</li>
+                        <li>公式サイトへの企業名とロゴの掲載</li>
+                        <li>希望者全員の札幌現地イベントご招待（一般席）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes -->
+    <section id="notes" class="section overview">
+        <canvas class="film-grain-canvas"></canvas>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">NOTES</span>
+                    <span class="title-ja">共通事項・備考</span>
+                </h2>
+            </div>
+            <div class="apply-card" style="max-width: 800px; margin: 0 auto;">
+                <ul class="apply-list">
+                    <li><strong>日時</strong>：2026年8月29日（土）14:00〜18:00</li>
+                    <li><strong>場所</strong>：Deep Tech CORE SAPPORO</li>
+                    <li><strong>プラチナ枠数</strong>：2枠限定（先着順）</li>
+                    <li><strong>賞の選定（プラチナのみ）</strong>：授与作品は審査員が選定するほか、貴社・貴団体の担当者様が直接選ぶことも可能です。賞の名称は事前にご指定ください。</li>
+                    <li><strong>CM動画の長さ</strong>：15秒〜60秒の任意の長さで現地放映。放映を希望されない場合は省略いただけます（プラチナ・ゴールドのみ）。</li>
+                    <li><strong>データ提出</strong>：CM動画・企業名・ロゴのデータは事前にメールでご提出いただきます。</li>
+                    <li><strong>配信について</strong>：配信環境や動画形式の都合上、オンライン配信時に映像品質が低下する場合がございますので、あらかじめご了承ください。</li>
+                    <li><strong>交通費・滞在費</strong>：支援者様の交通費や滞在費は各自でご負担ください。</li>
+                    <li><strong>連絡方法</strong>：詳細はメールにてご連絡します。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">パートナーのお申し込み・<br>お問い合わせ</h2>
+                <p class="cta-description">
+                    パートナーにご興味をお持ちの企業・団体様は、<br>
+                    メールにてお気軽にご連絡ください。
+                </p>
+                <div class="cta-buttons">
+                    <a href="mailto:info@sugoiai.org" class="btn btn-primary btn-large">
+                        <span class="btn-icon">✉️</span>
+                        <span class="btn-text">info@sugoiai.org</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>札幌すごいAIハッカソン 2026夏</h3>
+                    <p>Sapporo Sugoi AI Hackathon 2026 Summer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#why-partner">パートナーになる意義</a>
+                    <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer">Discord</a>
+                </div>
+                <div class="footer-info">
+                    <p>主催：札幌すごいAI会</p>
+                    <p>会場協力：Deep Tech CORE SAPPORO</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-festival">本イベントは「札幌すごいAIまつり 2026夏」の一環として開催されます。</p>
+                <p>&copy; 2026 札幌すごいAI会 All rights reserved.</p>
+                <p class="footer-disclaimer">※本イベントは個人有志による活動であり、特定の企業・営利団体を代表するものではありません。</p>
+                <p class="footer-hashtag">#札幌すごいAIハッカソン</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

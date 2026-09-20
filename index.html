@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>札幌すごいAIハッカソン 2026夏 | AI駆動開発ハッカソン</title>
+    <meta name="description" content="2時間で、世界を作れ。思考→実装→発表を圧縮する実験場。AI駆動開発ハッカソン、2026年8月29日(土)札幌開催。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="札幌すごいAIハッカソン 2026夏">
+    <meta property="og:description" content="2時間で、世界を作れ。思考→実装→発表を圧縮する実験場。2026年8月29日(土)札幌開催。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack-2026-summer.sugoiai.org/">
+    <meta property="og:site_name" content="札幌すごいAIハッカソン 2026夏">
+    <meta property="og:image" content="https://hack-2026-summer.sugoiai.org/images/logot.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="札幌すごいAIハッカソン 2026夏">
+    <meta name="twitter:description" content="2時間で、世界を作れ。思考→実装→発表を圧縮する実験場。">
+    <meta name="twitter:image" content="https://hack-2026-summer.sugoiai.org/images/logot.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logot.png">
+    <link rel="apple-touch-icon" href="images/logot.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ─── HERO ─── -->
+    <section id="hero" class="hero">
+        <!-- 言語切替（heroに対して絶対配置：スクロールすると一緒に流れて消える） -->
+        <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Language">
+            <button type="button" class="lang-btn active" data-lang="ja">JP</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="zh">CN</button>
+        </div>
+        <div class="hero-background">
+            <div class="film-particle"></div>
+            <div class="film-particle"></div>
+            <div class="film-particle"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-date">2026.8.29</div>
+            <div class="hero-badge" data-i18n="hero.badge">参加エントリー受付中</div>
+            <h1 class="hero-title">
+                <span class="title-main" data-i18n="hero.title">札幌すごいAIハッカソン<br>2026夏</span>
+                <span class="title-sub">Sapporo Sugoi AI Hackathon 2026 Summer</span>
+            </h1>
+            <p class="hero-tagline" data-i18n="hero.tagline">2時間で、世界を作れ。<br>AI駆動開発ハッカソン。</p>
+            <div class="hero-info-badge">
+                <span data-i18n="hero.info1">札幌現地開催</span>
+                <span data-i18n="hero.info2">個人・チーム参加OK</span>
+                <span data-i18n="hero.info3">無料</span>
+            </div>
+            <div class="hero-cta">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <span class="btn-icon">⚡</span>
+                    <span class="btn-text" data-i18n="hero.cta.entry">エントリーする</span>
+                </a>
+                <a href="#overview" class="btn btn-secondary">
+                    <span class="btn-text" data-i18n="hero.cta.overview">開催概要を確認する</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── WINNERS ─── -->
+    <section id="winners" class="section winners">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">WINNERS</span>
+                    <span class="title-ja" data-i18n="sec.winners">受賞</span>
+                </h2>
+            </div>
+            <div class="winners-grid">
+
+                <div class="winner-card">
+                    <div class="winner-image-wrap">
+                        <img src="images/prize1.JPG" alt="福田英輝（A-kun）" class="winner-image">
+                    </div>
+                    <div class="winner-info">
+                        <p class="winner-award" data-i18n="award.grand">最優秀賞</p>
+                        <h3 class="winner-name" data-i18n="win.1.name">福田 英輝（A-kun）</h3>
+                        <p class="winner-affiliation" data-i18n="win.1.aff">株式会社インフィニットループ</p>
+                    </div>
+                </div>
+
+                <div class="winner-card">
+                    <div class="winner-image-wrap">
+                        <img src="images/prize2.JPG" alt="山崎楽人（らっく）" class="winner-image">
+                    </div>
+                    <div class="winner-info">
+                        <p class="winner-award" data-i18n="award.nttdmse">株式会社NTTデータMSE賞</p>
+                        <h3 class="winner-name" data-i18n="win.2.name">山崎 楽人（らっく）</h3>
+                        <p class="winner-affiliation" data-i18n="win.2.aff">北海道科学大学</p>
+                    </div>
+                </div>
+
+                <div class="winner-card">
+                    <div class="winner-image-wrap">
+                        <img src="images/prize3.JPG" alt="町原悠太（kociden）" class="winner-image">
+                    </div>
+                    <div class="winner-info">
+                        <p class="winner-award" data-i18n="award.hp">HP賞</p>
+                        <h3 class="winner-name" data-i18n="win.3.name">町原 悠太（kociden）</h3>
+                        <p class="winner-affiliation" data-i18n="win.3.aff">北海道大学</p>
+                    </div>
+                </div>
+
+                <div class="winner-card">
+                    <div class="winner-image-wrap">
+                        <img src="images/prize4.JPG" alt="大澤元気（まいけるさん）" class="winner-image">
+                    </div>
+                    <div class="winner-info">
+                        <p class="winner-award" data-i18n="award.eques">株式会社EQUES賞</p>
+                        <h3 class="winner-name" data-i18n="win.4.name">大澤 元気（まいけるさん）</h3>
+                        <p class="winner-affiliation" data-i18n="win.4.aff">個人参加</p>
+                    </div>
+                </div>
+
+                <div class="winner-card">
+                    <div class="winner-image-wrap">
+                        <img src="images/prize5.JPG" alt="小井田大賀（koitan）" class="winner-image">
+                    </div>
+                    <div class="winner-info">
+                        <p class="winner-award" data-i18n="award.samurai">AIサムライ賞</p>
+                        <h3 class="winner-name" data-i18n="win.5.name">小井田 大賀（koitan）</h3>
+                        <p class="winner-affiliation" data-i18n="win.5.aff">ユニティア株式会社</p>
+                    </div>
+                </div>
+
+                <div class="winner-card">
+                    <div class="winner-image-wrap">
+                        <img src="images/prize6.JPG" alt="ラーメンおいしいチーム" class="winner-image">
+                    </div>
+                    <div class="winner-info">
+                        <p class="winner-award" data-i18n="award.nakamura">中村賞</p>
+                        <h3 class="winner-name" data-i18n="win.6.name">ラーメンおいしいチーム<br>川村 和親・川村 悠真</h3>
+                        <p class="winner-affiliation" data-i18n="win.6.aff">個人参加</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── OVERVIEW ─── -->
+    <section id="overview" class="section overview">
+        <canvas id="filmGrainCanvas" class="film-grain-canvas"></canvas>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">OVERVIEW</span>
+                    <span class="title-ja" data-i18n="sec.overview">開催概要</span>
+                </h2>
+            </div>
+            <div class="overview-content">
+                <div class="overview-main">
+                    <div class="overview-image-wrap">
+                        <img src="images/DTC.JPG" alt="Deep Tech CORE SAPPORO 会場" class="venue-image">
+                    </div>
+                    <div class="overview-text">
+                        <h3 class="overview-subtitle" data-i18n="ov.subtitle">札幌現地で、AI駆動開発。</h3>
+                        <p data-i18n="ov.p1">2時間で、思考・実装・発表を圧縮する。限られた時間の中で何を選び、何を捨て、何を具現化するか。その意思決定を競う場です。</p>
+                        <p data-i18n="ov.p2">「価値が伝わる状態」を作り切った人が、この場では勝者になれます。</p>
+                        <div class="event-info">
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="ov.l1">開催日時</div>
+                                <div class="info-value" data-i18n="ov.v1">2026年8月29日（土）14:00〜18:00</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="ov.l2">会場</div>
+                                <div class="info-value">Deep Tech CORE SAPPORO</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="ov.l3">参加費</div>
+                                <div class="info-value" data-i18n="ov.v3">無料</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="ov.l4">参加形式</div>
+                                <div class="info-value" data-i18n="ov.v4">現地開催（個人・チーム参加可）</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="ov.l5">チーム人数</div>
+                                <div class="info-value" data-i18n="ov.v5">1〜4名（個人参加も可能）</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="ov.l6">エントリー</div>
+                                <div class="info-value" data-i18n="ov.v6"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">エントリーフォーム</a>より受付</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── INTRODUCTION ─── -->
+    <section id="about" class="section about-festival">
+        <canvas id="rippleCanvas" class="ripple-canvas"></canvas>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header" style="text-align:left; margin-bottom: 2rem;">
+                        <h2 class="section-title" style="align-items: flex-start;">
+                            <span class="title-en">INTRODUCTION</span>
+                            <span class="title-ja" data-i18n="sec.about">このイベントについて</span>
+                        </h2>
+                    </div>
+                    <blockquote class="about-origin" data-i18n="about.quote">
+                        制約の中で何を選び、何を捨てるか。<br>
+                        その意思決定こそが、価値になる。
+                        <span class="about-origin-sig">AI駆動開発ハッカソン コアメッセージ</span>
+                    </blockquote>
+                    <p class="about-lead" data-i18n="about.lead">
+                        AI時代は"実装速度"が価値になる。
+                    </p>
+                    <p data-i18n="about.p1">
+                        完成度よりも価値の提示が重要です。本イベントはその極限圧縮体験。限られた時間の中での意思決定と表現を評価します。
+                    </p>
+                    <p data-i18n="about.p2">
+                        何を作るかではなく、「何を残し、何を捨てたか」を問う場所です。
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <span class="feature-icon">⚡</span>
+                            <span class="feature-text" data-i18n="about.f1">思考 → 実装 → 発表の圧縮体験</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-icon">🔰</span>
+                            <span class="feature-text" data-i18n="about.f2">未経験者・ビギナー向けの当日使い方説明もあり</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-icon">🎒</span>
+                            <span class="feature-text" data-i18n="about.f3">玄人は何を持ち込んでもOK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/samurai.jpg" alt="イベントの雰囲気" class="about-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── PARTNERS ─── -->
+    <section id="partners" class="section partners-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">SPONSORS</span>
+                    <span class="title-ja" data-i18n="sec.partners">スポンサー</span>
+                </h2>
+                <p class="section-description" data-i18n="partners.desc">ハッカソンを支えてくださるスポンサー企業・団体・サービスの皆さまです。<br>温かいご支援に心より感謝申し上げます。</p>
+            </div>
+            <div class="partners-grid">
+
+                <a href="https://www.nttd-mse.com/" target="_blank" rel="noopener noreferrer" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/NTTDMSE_logo.png" alt="株式会社NTTデータMSE">
+                    </div>
+                    <div class="partner-name" data-i18n="partners.nttdmse">株式会社NTTデータMSE</div>
+                </a>
+
+                <a href="https://www.hp.com/jp-ja/home.html" target="_blank" rel="noopener noreferrer" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/HP.png" alt="株式会社日本HP">
+                    </div>
+                    <div class="partner-name" data-i18n="partners.hp">株式会社日本HP</div>
+                </a>
+
+                <a href="https://eques.co.jp" target="_blank" rel="noopener noreferrer" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/eques.png" alt="株式会社EQUES">
+                    </div>
+                    <div class="partner-name" data-i18n="partners.eques">株式会社EQUES</div>
+                </a>
+
+                <!--
+                <a href="https://eques.co.jp/" target="_blank" rel="noopener noreferrer" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/eques-header-logo.png" alt="株式会社EQUES">
+                    </div>
+                    <div class="partner-name">株式会社EQUES</div>
+                </a>
+                -->
+
+                <a href="https://deeptech-core.com" target="_blank" rel="noopener noreferrer" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/DTC_logo.png" alt="DTC株式会社">
+                    </div>
+                    <div class="partner-name" data-i18n="partners.dtc">DTC株式会社</div>
+                </a>
+
+                <a href="https://hanamii.jp" target="_blank" rel="noopener noreferrer" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/hanamii.png" alt="hanamii">
+                    </div>
+                    <div class="partner-name">hanamii</div>
+                    <span class="partner-doc-btn" role="button" tabindex="0"
+                          onclick="event.preventDefault(); event.stopPropagation(); window.open('images/hanamii.pdf', '_blank', 'noopener');"
+                          onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.stopPropagation(); window.open('images/hanamii.pdf', '_blank', 'noopener'); }"
+                          data-i18n="partners.hanamiiDoc">使い方のダウンロード</span>
+                </a>
+
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <span class="partner-logo-text" data-i18n="partners.sapporoLogo">札幌市</span>
+                    </div>
+                    <div class="partner-name" data-i18n="partners.sapporo">後援：札幌市</div>
+                </div>
+
+                <!--
+                <a href="https://www.ai-driven.dev/ai駆動開発コンソーシアム/" target="_blank" rel="noopener noreferrer" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/aicon.png" alt="AI駆動開発コンソーシアム">
+                    </div>
+                    <div class="partner-name">AI駆動開発コンソーシアム</div>
+                </a>
+
+                <a href="https://discord.com/invite/RNaAgXZngh" target="_blank" rel="noopener noreferrer" class="partner-card">
+                    <div class="partner-logo">
+                        <img src="images/aiau.png" alt="AIAU">
+                    </div>
+                    <div class="partner-name">AIAU</div>
+                </a>
+                -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── WHAT YOU WILL DO ─── -->
+    <section id="flow" class="section divisions">
+        <canvas id="projectorCanvas" class="projector-canvas"></canvas>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">WHAT YOU WILL DO</span>
+                    <span class="title-ja" data-i18n="sec.flow">体験の流れ</span>
+                </h2>
+                <p class="section-description" data-i18n="flow.desc">当日完結。受付から表彰まで、この流れで進みます。</p>
+            </div>
+            <div class="divisions-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+
+                <div class="division-card division-main">
+                    <div class="division-number">01</div>
+                    <div class="division-content">
+                        <div class="division-badge badge-main">STEP 1</div>
+                        <h3 class="division-title" data-i18n="flow.s1.title">テーマ提示</h3>
+                        <p class="division-subtitle">Theme Announcement</p>
+                        <p class="division-description" data-i18n="flow.s1.desc">
+                            イベント開始直後、当日のテーマが発表されます。解釈の幅は広め。正解はひとつではありません。
+                        </p>
+                        <div class="division-highlight" data-i18n="flow.s1.hl">
+                            あなたなりの解釈で、<strong>スタートを切ろう</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="division-card division-exp">
+                    <div class="division-number">02</div>
+                    <div class="division-content">
+                        <div class="division-badge badge-exp">STEP 2</div>
+                        <h3 class="division-title" data-i18n="flow.s2.title">アイデア考案</h3>
+                        <p class="division-subtitle">Instant Decision</p>
+                        <p class="division-description" data-i18n="flow.s2.desc">
+                            テーマをもとに、何を作るかを考えます。完璧なアイデアでなくていい。まず方向性を決めることが大事です。
+                        </p>
+                        <div class="division-highlight division-exp-highlight" data-i18n="flow.s2.hl">
+                            小さく決めて、<strong>大きく動く</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="division-card division-special">
+                    <div class="division-number">03</div>
+                    <div class="division-content">
+                        <div class="division-badge badge-special">STEP 3</div>
+                        <h3 class="division-title" data-i18n="flow.s3.title">実装</h3>
+                        <p class="division-subtitle">Build with AI</p>
+                        <p class="division-description" data-i18n="flow.s3.desc">
+                            AIツールや技術を使って、アイデアを形にします。使えるツールに制限はなし。価値が伝わる状態を目指しましょう。
+                        </p>
+                        <div class="division-highlight division-special-highlight" data-i18n="flow.s3.hl">
+                            使えるものは<strong>全部使っていい</strong>
+                        </div>
+                        <p class="division-beginner-note" data-i18n="flow.s3.note">ビギナー向けの当日10分講座あり。未経験でも安心してスタートできます。</p>
+                    </div>
+                </div>
+
+                <div class="division-card division-main">
+                    <div class="division-number">04</div>
+                    <div class="division-content">
+                        <div class="division-badge badge-main">STEP 4</div>
+                        <h3 class="division-title" data-i18n="flow.s4.title">プレゼン</h3>
+                        <p class="division-subtitle">Present Your Value</p>
+                        <p class="division-description" data-i18n="flow.s4.desc">
+                            3分の発表。スライドは最大3枚。作ったものと、そこに込めた思いを自分の言葉で伝えてください。
+                        </p>
+                        <div class="division-highlight" data-i18n="flow.s4.hl">
+                            伝えることも、<strong>ものづくりのうち</strong>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── RULES ─── -->
+    <section id="rules" class="section application">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">RULES</span>
+                    <span class="title-ja" data-i18n="sec.rules">ルール</span>
+                </h2>
+                <p class="section-description" data-i18n="rules.desc">自由度の高さが、このハッカソンの特徴です。</p>
+            </div>
+            <div class="application-grid">
+
+                <div class="apply-card">
+                    <h3 class="apply-card-title" data-i18n="rules.card1.title">参加ルール</h3>
+                    <ul class="apply-list">
+                        <li data-i18n="rules.r1"><a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer" class="guideline-link">Discord（札幌すごいAI会）</a>のハッカソンチャンネルで「参加します！」と宣言すること</li>
+                        <li data-i18n="rules.r2"><strong>持ち込み自由</strong>　—　ノートPC・外部デバイス・フィジカルデバイス・VRデバイス・外部ライブラリ・公開リポジトリのコード・自分の過去の成果物、何でもOK</li>
+                        <li data-i18n="rules.r3"><strong>使用ツール制限なし</strong>　—　AI含む、どんなツールも使ってよい</li>
+                        <li data-i18n="rules.r4"><strong>個人・チームどちらも可</strong>　—　1名〜4名まで</li>
+                        <li data-i18n="rules.r5">事前の学習・準備はOK。当日のアウトプットが評価対象</li>
+                        <li data-i18n="rules.r6"><a href="conditions.html" target="_blank" rel="noopener noreferrer" class="guideline-link">参加規約</a>に同意していること</li>
+                    </ul>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: var(--spacing-md); margin-bottom: 0.6rem;" data-i18n="rules.note">詳細はこちらのガイドライン・参加規約をご確認ください。</p>
+                    <div class="rules-doc-btns">
+                        <a href="guideline.html" target="_blank" rel="noopener noreferrer" class="rules-doc-btn" data-i18n="rules.btn.guide">ルール・ガイドライン</a>
+                        <a href="conditions.html" target="_blank" rel="noopener noreferrer" class="rules-doc-btn" data-i18n="rules.btn.terms">参加規約</a>
+                    </div>
+                </div>
+
+                <div class="apply-card">
+                    <h3 class="apply-card-title" data-i18n="rules.card2.title">制約</h3>
+                    <ul class="apply-list">
+                        <li data-i18n="rules.c1">開発時間中（14:10〜16:10）はスライド作成禁止</li>
+                        <li data-i18n="rules.c2">基本発表は3分以内</li>
+                        <li data-i18n="rules.c3">発表スライドは最大3枚まで</li>
+                        <li data-i18n="rules.c4">技術解説を行う場合は追加で最大2分</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── THEME ─── -->
+    <section id="theme" class="section overview" style="background: var(--dark-bg);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">THEME</span>
+                    <span class="title-ja" data-i18n="sec.theme">テーマ</span>
+                </h2>
+            </div>
+            <div class="overview-content">
+                <div class="overview-main" style="grid-template-columns: 1fr; max-width: 700px; margin: 0 auto;">
+                    <div class="overview-text">
+                        <h3 class="overview-subtitle" style="text-align: center;" data-i18n="theme.subtitle">当日発表</h3>
+                        <p data-i18n="theme.p1">テーマは当日イベント開始時に発表されます。事前に知ることはできません。</p>
+                        <p data-i18n="theme.p2">テーマは<strong>抽象的</strong>に設定されています。正解がある問いではなく、発想力と解釈力が問われます。あなたの「解釈」が、すでに作品の一部です。</p>
+                        <div class="event-info">
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="theme.l1">テーマ形式</div>
+                                <div class="info-value" data-i18n="theme.v1">抽象テーマ（当日発表）</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="theme.l2">発表タイミング</div>
+                                <div class="info-value" data-i18n="theme.v2">14:00〜14:10（イベント開始直後）</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label" data-i18n="theme.l3">問われること</div>
+                                <div class="info-value" data-i18n="theme.v3">発想力・解釈力・意思決定の速さ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── TIMELINE ─── -->
+    <section id="timeline" class="section timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">TIMELINE</span>
+                    <span class="title-ja" data-i18n="sec.timeline">時間設計</span>
+                </h2>
+                <p class="section-description" data-i18n="tl.desc">4時間に詰め込まれた、思考と実装の戦場。</p>
+            </div>
+            <div class="timeline-list">
+
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00 – 14:10</div>
+                    <div class="timeline-bar"></div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title" data-i18n="tl.1.title">テーマ発表</h3>
+                        <p class="timeline-desc" data-i18n="tl.1.desc">テーマが公開されます。ここから2時間のカウントダウンがスタートします。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-main">
+                    <div class="timeline-time">14:10 – 16:10</div>
+                    <div class="timeline-bar timeline-bar-main"></div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title" data-i18n="tl.2.title">開発（120分）</h3>
+                        <p class="timeline-desc" data-i18n="tl.2.desc">スライド作成は禁止。AIや技術を使って、アイデアを形にする時間です。使えるものは何でも活用してください。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:10 – 16:40</div>
+                    <div class="timeline-bar"></div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title" data-i18n="tl.3.title">発表準備（30分）</h3>
+                        <p class="timeline-desc" data-i18n="tl.3.desc">スライド作成が解禁されます。何を伝えるかを整理して、最大3枚にまとめましょう。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:40 – 17:40</div>
+                    <div class="timeline-bar"></div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title" data-i18n="tl.4.title">発表（60分）</h3>
+                        <p class="timeline-desc" data-i18n="tl.4.desc">各チーム・個人3分（＋任意2分の技術解説）。作ったものと、そこに込めた思いを伝えてください。</p>
+                    </div>
+                </div>
+
+                <!--
+                <div class="timeline-item">
+                    <div class="timeline-time"></div>
+                    <div class="timeline-bar"></div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title">懇親会（60分）</h3>
+                        <p class="timeline-desc">発表後、参加者・審査員・スタッフで自由に交流できる時間です。</p>
+                    </div>
+                </div>
+                -->
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:40 – 18:00</div>
+                    <div class="timeline-bar timeline-bar-award"></div>
+                    <div class="timeline-event">
+                        <h3 class="timeline-title" data-i18n="tl.5.title">審査・表彰</h3>
+                        <p class="timeline-desc" data-i18n="tl.5.desc">審査員が評価し、最優秀賞・審査員特別賞が発表されます。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── OUTPUT & PRESENTATION ─── -->
+    <section id="output" class="section application" style="background: var(--dark-bg);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">OUTPUT &amp; PRESENTATION</span>
+                    <span class="title-ja" data-i18n="sec.output">成果物と発表形式</span>
+                </h2>
+                <p class="section-description" data-i18n="out.desc">完成を目指さなくていい。価値が伝わる状態であれば十分。</p>
+            </div>
+            <div class="application-grid">
+
+                <div class="apply-card">
+                    <div class="apply-card-icon">🛠️</div>
+                    <h3 class="apply-card-title" data-i18n="out.card1.title">成果物</h3>
+                    <p class="apply-card-subtitle" data-i18n="out.card1.sub">モックレベルでもOK、体験を重視。そして技術的に作り込むほど加点。</p>
+                    <ul class="apply-list apply-list-check">
+                        <li data-i18n="out.d1">プロトタイプ</li>
+                        <li data-i18n="out.d2">UIモック</li>
+                        <li data-i18n="out.d3">AIデモ</li>
+                        <li data-i18n="out.d4">動画</li>
+                        <li data-i18n="out.d5">その他、価値を伝えられるもの</li>
+                    </ul>
+                </div>
+
+                <div class="apply-card">
+                    <div class="apply-card-icon">🎤</div>
+                    <h3 class="apply-card-title" data-i18n="out.card2.title">発表形式</h3>
+                    <p class="apply-card-subtitle" data-i18n="out.card2.sub">基本発表は必須。技術解説は任意。</p>
+                    <ul class="apply-list">
+                        <li data-i18n="out.f1">
+                            <strong>基本発表（必須・3分）</strong><br>
+                            スライド最大3枚<br>
+                            ①&nbsp;課題・テーマ解釈&nbsp;②&nbsp;アイデア・価値&nbsp;③&nbsp;体験イメージ<br>
+                            ＋ 成果物デモ
+                        </li>
+                        <li data-i18n="out.f2">
+                            <strong>技術解説（任意・最大2分）</strong><br>
+                            アーキテクチャ / 技術選定 / AIの使い方
+                        </li>
+                    </ul>
+                    <div class="prompt-block">
+                        <div class="prompt-block-header">
+                            <span class="prompt-block-label" data-i18n="out.prompt.label">スライド構成サンプルプロンプト</span>
+                            <button class="prompt-copy-btn" onclick="copyPrompt(this)" title="コピー"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+                        </div>
+                        <pre class="prompt-pre" data-i18n="out.prompt.body"># スライド1：テーマ解釈 / 課題
+- 当日テーマの解釈（どう捉えたか）
+- なぜその解釈を選んだか（捨てた選択も含めて）
+- 解決したい体験 / 課題
+
+# スライド2：アイデア / 価値
+- 作ったもののコンセプト（何を作ったか）
+- ユーザーにとっての価値（何が嬉しいか）
+- 他と違うポイント（なぜこれが成立するか）
+
+# スライド3：体験 / デモ
+- 実際の使い方（ユーザーストーリー）
+- デモの流れ（何が起きるか）
+- 現時点の完成度と、あえて削ったもの</pre>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── JUDGING ─── -->
+    <section id="judging" class="section judging-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">JUDGING</span>
+                    <span class="title-ja" data-i18n="sec.judging">審査基準</span>
+                </h2>
+                <p class="section-description" data-i18n="jd.desc">競技として成立させるための、明確な評価軸。</p>
+            </div>
+            <div class="judging-grid">
+
+                <div class="judging-card">
+                    <p class="judging-card-label judging-card-label-base">BASE SCORE</p>
+                    <h3 class="judging-card-title" data-i18n="jd.base.title">ベース評価（最大10点）</h3>
+                    <ul class="judging-criteria-list">
+                        <li class="judging-criterion">
+                            <span class="score-badge score-badge-base" data-i18n="jd.badge5">0〜5点</span>
+                            <div>
+                                <div class="criterion-name" data-i18n="jd.c1.name">① インパクト</div>
+                                <div class="criterion-desc" data-i18n="jd.c1.desc">欲しい・面白い・驚きがあるか</div>
+                            </div>
+                        </li>
+                        <li class="judging-criterion">
+                            <span class="score-badge score-badge-base" data-i18n="jd.badge5">0〜5点</span>
+                            <div>
+                                <div class="criterion-name" data-i18n="jd.c2.name">② 実在感</div>
+                                <div class="criterion-desc" data-i18n="jd.c2.desc">実際に使われるイメージが湧くか</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="judging-card">
+                    <p class="judging-card-label judging-card-label-tech">TECH BONUS</p>
+                    <h3 class="judging-card-title" data-i18n="jd.tech.title">技術加点（最大＋8点）</h3>
+                    <ul class="judging-criteria-list">
+                        <li class="judging-criterion">
+                            <span class="score-badge score-badge-tech" data-i18n="jd.badge2">0〜2点</span>
+                            <div>
+                                <div class="criterion-name" data-i18n="jd.c3.name">③ 動作レベル</div>
+                                <div class="criterion-desc" data-i18n="jd.c3.desc">モックレベルで一連の体験が成立するか、実際のシステムとして動くか</div>
+                            </div>
+                        </li>
+                        <li class="judging-criterion">
+                            <span class="score-badge score-badge-tech" data-i18n="jd.badge2">0〜2点</span>
+                            <div>
+                                <div class="criterion-name" data-i18n="jd.c4.name">④ 公開・再現性</div>
+                                <div class="criterion-desc" data-i18n="jd.c4.desc">成果物公開をGitHub等で行っているか、公開URLなどで実際にアクセスし体験できるか</div>
+                            </div>
+                        </li>
+                        <li class="judging-criterion">
+                            <span class="score-badge score-badge-tech" data-i18n="jd.badge2">0〜2点</span>
+                            <div>
+                                <div class="criterion-name" data-i18n="jd.c5.name">⑤ 設計・技術選定</div>
+                                <div class="criterion-desc" data-i18n="jd.c5.desc">技術選定が合理的で構造的か</div>
+                            </div>
+                        </li>
+                        <li class="judging-criterion">
+                            <span class="score-badge score-badge-tech" data-i18n="jd.badge2">0〜2点</span>
+                            <div>
+                                <div class="criterion-name" data-i18n="jd.c6.name">⑥ システム連携</div>
+                                <div class="criterion-desc" data-i18n="jd.c6.desc">複数要素が構造的に連携しているか</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="judging-policy">
+                <h3 class="judging-policy-title" data-i18n="jd.policy.title">評価方針</h3>
+                <ul>
+                    <li data-i18n="jd.policy.1">アイデアのみ・技術のみではなく、それらを複合的に勘案して評価を行う</li>
+                    <li data-i18n="jd.policy.2">ユーザー体験として成立しているかを重視する</li>
+                    <li data-i18n="jd.policy.3">技術的な作り込みは必須ではないが、強力な加点要素になる</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── AWARDS ─── -->
+    <section id="awards" class="section awards">
+        <canvas id="sparkCanvas" class="spark-canvas"></canvas>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">AWARDS</span>
+                    <span class="title-ja" data-i18n="sec.awards">表彰</span>
+                </h2>
+                <p class="section-description" data-i18n="aw.desc">審査員が最終評価し、勝者を決定する。</p>
+            </div>
+            <div class="awards-grid">
+
+                <div class="award-card award-main">
+                    <div class="award-image-wrap">
+                        <img src="images/prize1.png" alt="最優秀賞" class="award-image">
+                    </div>
+                    <div class="award-body">
+                        <h3 class="award-title" data-i18n="aw.1.title">最優秀賞</h3>
+                        <p class="award-division" data-i18n="aw.1.div">1チーム・個人</p>
+                        <p class="award-description" data-i18n="aw.1.desc">
+                            総合評価（ベース評価＋技術加点）で最も高いスコアを獲得したチーム・個人に授与します。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="award-card award-judge">
+                    <div class="award-image-wrap">
+                        <img src="images/prize2.png" alt="審査員特別賞" class="award-image">
+                    </div>
+                    <div class="award-body">
+                        <h3 class="award-title" data-i18n="aw.2.title">審査員特別賞</h3>
+                        <p class="award-division" data-i18n="aw.2.div">審査員人数分</p>
+                        <p class="award-description" data-i18n="aw.2.desc">
+                            各審査員の独断で選出します。総合評価とは別に、各審査員が「これだ」と感じた作品に授与します。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── JUDGES ─── -->
+    <section id="judges" class="section judges">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">JUDGES</span>
+                    <span class="title-ja" data-i18n="sec.judges">審査員紹介</span>
+                </h2>
+            </div>
+            <div class="judges-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 1200px; margin: var(--spacing-lg) auto 0;">
+
+                <div class="judge-card">
+                    <div class="judge-image-wrap">
+                        <img src="images/メイン正方形.JPG" alt="岸本悠佑" class="judge-image">
+                    </div>
+                    <div class="judge-info">
+                        <h3 class="judge-name" data-i18n="judge.1.name">岸本 悠佑</h3>
+                        <div class="judge-badges">
+                            <span class="judge-badge" data-i18n="award.eques">株式会社EQUES賞</span>
+                            <span class="judge-badge" data-i18n="award.samurai">AIサムライ賞</span>
+                        </div>
+                        <p class="judge-title" data-i18n="judge.1.title">札幌すごいAI会代表<br>AIサムライ</p>
+                        <p class="judge-comment" data-i18n="judge.1.comment">AIで企画やプロダクト作成が即刻行えてしまう現代。その場でどんな体験が生まれるのか、楽しみにしています！初めての方、ビギナーの方、そして猛者の方も、皆さんぜひチャレンジを！</p>
+                    </div>
+                </div>
+
+                <!--
+                <div class="judge-card">
+                    <div class="judge-image-wrap">
+                        <img src="images/bonjiko.png" alt="工藤僚馬(ぼんじこ)" class="judge-image">
+                    </div>
+                    <div class="judge-info">
+                        <h3 class="judge-name" data-i18n="judge.2.name">工藤 僚馬(ぼんじこ)</h3>
+                        <div class="judge-badges">
+                            <span class="judge-badge" data-i18n="award.bonjiko">ぼんじこ賞</span>
+                        </div>
+                        <p class="judge-title" data-i18n="judge.2.title">札幌すごいAI会副代表</p>
+                        <p class="judge-comment" data-i18n="judge.2.comment">あっと驚く発想から、人の心に寄り添う体験まで、いろんなプロダクトとの出会いを楽しみにしています！AI駆動開発という新たな手法を駆使して、みんなで楽しくやりましょう！</p>
+                    </div>
+                </div>
+                -->
+
+
+                <div class="judge-card">
+                    <div class="judge-image-wrap">
+                        <img src="images/nakajimasan.png" alt="中島憲一郎" class="judge-image">
+                    </div>
+                    <div class="judge-info">
+                        <h3 class="judge-name" data-i18n="judge.4.name">中島 憲一郎</h3>
+                        <div class="judge-badges">
+                            <span class="judge-badge" data-i18n="award.nttdmse">株式会社NTTデータMSE賞</span>
+                        </div>
+                        <p class="judge-title" data-i18n="judge.4.title">株式会社NTTデータMSE<br>ビジネス戦略統括室<br>AI戦略企画部</p>
+                        <p class="judge-comment" data-i18n="judge.4.comment">札幌から、新しいAI開発文化や次世代のものづくりが生まれることを大変楽しみにしています。<br>
+学生・社会人・企業が垣根を越えて集まり、AI駆動開発に挑戦することで、多くの学びと新しいつながりが生まれる素晴らしい機会になることを期待しています。NTTデータMSEとしても、こうした地域コミュニティの挑戦を応援していきたいと思います。</p>
+                    </div>
+                </div>
+
+                <!--
+                <div class="judge-card">
+                    <div class="judge-image-wrap">
+                        <img src="images/massan.jpg" alt="吉田雅紀(マッサン)" class="judge-image">
+                    </div>
+                    <div class="judge-info">
+                        <h3 class="judge-name">吉田 雅紀(マッサン)</h3>
+                        <p class="judge-title">Accenture 北海道オフィス<br><span class="judge-title-small">(Accenture Innovation Center Hokkaido)<br>Technology Consulting本部<br>TfLS (Tech for Living Systems)</span></p>
+                        <p class="judge-comment">AI駆動開発、やってみると「実装する内容と捨てる判断」で勝負が決まります。2時間という制約は不自由ではなく、むしろ意思決定が研ぎ澄まされる装置。皆さんがどう切り抜けて何を作ってくれるか、楽しみにしています！</p>
+                    </div>
+                </div>
+                -->
+
+                <div class="judge-card">
+                    <div class="judge-image-wrap">
+                        <img src="images/shoya.jpg" alt="勝谷裕史" class="judge-image">
+                    </div>
+                    <div class="judge-info">
+                        <h3 class="judge-name" data-i18n="judge.5.name">勝谷 裕史</h3>
+                        <div class="judge-badges">
+                            <span class="judge-badge" data-i18n="award.hp">HP賞</span>
+                        </div>
+                        <p class="judge-title" data-i18n="judge.5.title">株式会社 日本HP<br>エンタープライズ営業統括<br>ソリューション営業本部 ワークステーションビジネス開発部<br>AI/データサイエンス市場開発担当部長</p>
+                        <p class="judge-comment" data-i18n="judge.5.comment">たった2時間でMVP（Minimum Viable Product：実用最小限の製品）を実装するとなるとおそらく複数のAIエージェントに複数の仕様、実装、テストを並行して実行させることになると思います。北の大地に鍛えられたであろう皆さんのAIをとことん使いこなす姿をぜひ拝見させていただきます！</p>
+                    </div>
+                </div>
+
+                <div class="judge-card">
+                    <div class="judge-image-wrap">
+                        <img src="images/nakamura.JPG" alt="中村元揮" class="judge-image">
+                    </div>
+                    <div class="judge-info">
+                        <h3 class="judge-name" data-i18n="judge.3.name">中村 元揮</h3>
+                        <div class="judge-badges">
+                            <span class="judge-badge" data-i18n="award.nakamura">中村賞</span>
+                        </div>
+                        <p class="judge-title" data-i18n="judge.3.title">札幌すごいAI会 運営 / ハーネスに向き合う人<br>AIで北海道を盛り上げるマン</p>
+                        <p class="judge-comment" data-i18n="judge.3.comment">初めてプログラミングを勉強したとき、ボタンがひとつ動くだけで感動したのを覚えています。今はアイデアをAIに伝えるだけで、数時間でアプリを作れてしまう時代になりました。こんなに素晴らしい時代に、開発をしないという選択肢はありません。あなたのアイデアが形になるのを楽しみにしています！</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── ENTRY ─── -->
+    <section id="entry" class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-i18n="cta.title">2時間で、<br>世界を作れ。</h2>
+                <p class="cta-description" data-i18n="cta.desc">
+                    エンジニアでも、デザイナーでも、初心者でも。<br>
+                    AIと技術で何かを作りたい人なら、誰でも挑戦できる。
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                        <span class="btn-icon">⚡</span>
+                        <span class="btn-text" data-i18n="cta.btn.entry">エントリーフォームへ</span>
+                    </a>
+                    <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
+                        <span class="btn-text" data-i18n="cta.btn.discord">💬 Discordで質問する</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── ORGANIZER ─── -->
+    <section id="organizer" class="section organizer">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-en">ORGANIZER</span>
+                    <span class="title-ja" data-i18n="sec.organizer">主催</span>
+                </h2>
+            </div>
+            <div class="organizer-content">
+                <div class="organizer-photo-wrap">
+                    <img src="images/メイン正方形.JPG" alt="主催者 岸本悠佑" class="organizer-photo">
+                </div>
+                <div class="organizer-info">
+                    <h3 class="organizer-names" data-i18n="org.names">主催　岸本 悠佑<br>〜AIサムライ〜<br>札幌すごいAI会代表</h3>
+                    <p class="organizer-bio" data-i18n="org.bio">
+                        札幌を拠点に、AIを学び・挑み・楽しむ文化を育てるコミュニティです。定期的なイベントや勉強会を通じて、AIを使いこなす人を増やしています。
+                    </p>
+                    <div class="organizer-social">
+                        <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer" class="social-link" data-i18n="org.discord">
+                            💬 Discord: 札幌すごいAI会
+                        </a>
+                        <a href="https://twitter.com/ykishimotoy" target="_blank" rel="noopener noreferrer" class="social-link">
+                            X (Twitter): @ykishimotoy
+                        </a>
+                        <a href="mailto:info@sugoiai.org" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">
+                            <span class="btn-text" data-i18n="org.mail">✉️ メールで問い合わせる</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 data-i18n="ft.logo">札幌すごいAIハッカソン 2026夏</h3>
+                    <p>Sapporo Sugoi AI Hackathon 2026 Summer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#overview" data-i18n="ft.l1">開催概要</a>
+                    <a href="#flow" data-i18n="ft.l2">体験の流れ</a>
+                    <a href="#timeline" data-i18n="ft.l3">タイムライン</a>
+                    <a href="#judging" data-i18n="ft.l4">審査基準</a>
+                    <a href="#entry" data-i18n="ft.l5">エントリー</a>
+                    <a href="conditions.html" target="_blank" rel="noopener noreferrer" data-i18n="ft.l6">参加規約</a>
+                    <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer">Discord</a>
+                </div>
+                <div class="footer-info">
+                    <p data-i18n="ft.info1">主催：札幌すごいAI会</p>
+                    <p data-i18n="ft.info2">会場：Deep Tech CORE SAPPORO</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-festival" data-i18n="ft.festival">本イベントは「札幌すごいAIまつり 2026夏」の一環として開催されます。</p>
+                <p data-i18n="ft.copy">&copy; 2026 札幌すごいAI会 All rights reserved.</p>
+                <p class="footer-disclaimer" data-i18n="ft.disclaimer">※本イベントは個人有志による活動であり、特定の企業・営利団体を代表するものではありません。</p>
+                <p class="footer-hashtag">#札幌すごいAIハッカソン</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="i18n.js"></script>
+    <script>
+        const ICON_COPY  = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+        const ICON_CHECK = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+        function copyPrompt(btn) {
+            const pre = btn.closest('.prompt-block').querySelector('.prompt-pre');
+            navigator.clipboard.writeText(pre.textContent).then(() => {
+                btn.innerHTML = ICON_CHECK;
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerHTML = ICON_COPY;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

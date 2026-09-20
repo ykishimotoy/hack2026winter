@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ルール・ガイドライン | 札幌すごいAIハッカソン 2026夏</title>
+    <meta name="description" content="札幌すごいAIハッカソン 2026夏の詳細ルールとガイドラインです。">
+    <link rel="icon" type="image/png" href="images/logot.png">
+    <link rel="apple-touch-icon" href="images/logot.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .guideline-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at center top, #1a1400 0%, var(--dark-bg) 60%);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: var(--spacing-md);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: var(--film-cyan);
+            transform: translateX(-4px);
+        }
+
+        .guideline-body {
+            background: var(--dark-surface);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .guideline-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guideline-intro {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-md);
+            background: var(--dark-elevated);
+            border-left: 4px solid var(--film-purple);
+            border-radius: 8px;
+        }
+
+        .guideline-section {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .guideline-section-title {
+            font-size: 1.4rem;
+            font-weight: 900;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid rgba(255, 214, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .guideline-section-title .num {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .guideline-section p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .guideline-section p strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .guideline-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--spacing-sm) 0;
+        }
+
+        .guideline-list li {
+            padding: 0.5rem 0 0.5rem 1.6rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+            line-height: 1.8;
+            border-bottom: 1px solid rgba(255, 214, 0, 0.07);
+        }
+
+        .guideline-list li:last-child {
+            border-bottom: none;
+        }
+
+        .guideline-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--film-purple);
+        }
+
+        .guideline-list.danger li::before {
+            content: "✕";
+            color: #e05555;
+        }
+
+        .guideline-note {
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: rgba(255, 214, 0, 0.08);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 214, 0, 0.2);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .guideline-warning {
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: rgba(224, 85, 85, 0.08);
+            border-radius: 8px;
+            border: 1px solid rgba(224, 85, 85, 0.3);
+            font-size: 0.9rem;
+            color: #ffaaaa;
+            line-height: 1.8;
+        }
+
+        .judging-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-md) 0;
+        }
+
+        .judging-table th,
+        .judging-table td {
+            padding: 0.8rem var(--spacing-sm);
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 214, 0, 0.1);
+            font-size: 0.95rem;
+        }
+
+        .judging-table th {
+            font-weight: 700;
+            color: var(--film-cyan);
+            background: rgba(0, 229, 255, 0.05);
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        .judging-table td {
+            color: var(--text-secondary);
+        }
+
+        .judging-table td:first-child {
+            color: var(--text-primary);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .score-col {
+            color: var(--film-purple) !important;
+            font-weight: 700 !important;
+            white-space: nowrap;
+        }
+
+        .guideline-footer-note {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 214, 0, 0.2);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.9;
+        }
+
+        .guideline-footer-note a {
+            color: var(--film-purple);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .guideline-footer-note a:hover {
+            color: var(--film-cyan);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="guideline-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">← トップページに戻る</a>
+            <h1 class="hero-title" style="animation: none;">
+                <span class="title-main" style="font-size: clamp(1.8rem, 5vw, 3rem);">ルール・ガイドライン</span>
+                <span class="title-sub">札幌すごいAIハッカソン 2026夏</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div class="guideline-body">
+        <div class="container">
+            <div class="guideline-content">
+
+                <p class="guideline-intro">
+                    このガイドラインは、札幌すごいAIハッカソン 2026夏に参加するすべての方に適用されます。<br>
+                    <strong>快適に戦い、公平に競い、互いが気持ちよくいられる</strong>ための最低限のルールをまとめました。エントリー前に一読してください。
+                </p>
+
+                <!-- 1. 参加ルール -->
+                <div class="guideline-section">
+                    <h2 class="guideline-section-title">
+                        <span class="num">01</span>参加ルール
+                    </h2>
+                    <p>
+                        本ハッカソンは、<strong>AIや技術を活用した価値あるプロダクト</strong>を短時間で生み出すことを競うイベントです。
+                    </p>
+                    <ul class="guideline-list">
+                        <li><strong>持ち込み自由</strong>：ノートPC、外部デバイス、ハードウェア等、何を持ち込んでもかまいません。</li>
+                        <li><strong>使用ツール制限なし</strong>：AIツール（ChatGPT、Claude、Cursor等）を含む、あらゆるツール・サービスの使用を認めます。</li>
+                        <li><strong>個人・チームどちらも可</strong>：一人でも複数人でも参加できます。チームの人数は<strong>1チーム4名まで</strong>。個人での参加も可能です。</li>
+                        <li>事前の学習・技術習得はOKです。当日のアウトプットが評価対象となります。</li>
+                    </ul>
+                    <div class="guideline-note">
+                        事前に作ったコードや素材を活用することは認めますが、当日のテーマに対して新たに制作した内容が評価の対象です。既存プロダクトをそのまま提出することは認めません。
+                    </div>
+                </div>
+
+                <!-- 2. 開発ルール -->
+                <div class="guideline-section">
+                    <h2 class="guideline-section-title">
+                        <span class="num">02</span>開発ルール
+                    </h2>
+                    <p>開発時間（14:10〜16:10）には以下のルールが適用されます。</p>
+                    <ul class="guideline-list">
+                        <li><strong>スライド作成禁止</strong>：開発時間中は、発表スライドの制作・編集を禁止します。手を動かすことに集中してください。</li>
+                        <li>スライド作成は発表準備時間（16:10〜16:40）から解禁されます。</li>
+                        <li>ドキュメント類の作成（README等）は開発の一部として認めます。</li>
+                    </ul>
+                </div>
+
+                <!-- 3. 成果物について -->
+                <div class="guideline-section">
+                    <h2 class="guideline-section-title">
+                        <span class="num">03</span>成果物について
+                    </h2>
+                    <p>
+                        成果物は「完成品」である必要はありません。<strong>「価値が伝わる状態」</strong>であれば、どんな形式でも構いません。
+                    </p>
+                    <ul class="guideline-list">
+                        <li>プロトタイプ（動くものが理想ですが、モックでもOK）</li>
+                        <li>UIモック（Figmaや画像でも可）</li>
+                        <li>AIデモ（プロンプト＋出力の提示でも可）</li>
+                        <li>動画（デモ動画、コンセプト動画等）</li>
+                        <li>その他、価値を伝えられると判断できるもの</li>
+                    </ul>
+                    <div class="guideline-note">
+                        完成度よりも「その2時間でどんな意思決定をし、何を形にしたか」が問われます。未完成でも臆せず発表してください。
+                    </div>
+                </div>
+
+                <!-- 4. 発表ルール -->
+                <div class="guideline-section">
+                    <h2 class="guideline-section-title">
+                        <span class="num">04</span>発表ルール
+                    </h2>
+                    <p>発表は2部構成です。基本発表は全員必須、技術解説は任意です。</p>
+
+                    <h3 style="font-size: 1.1rem; font-weight: 700; margin: var(--spacing-md) 0 var(--spacing-sm); color: var(--film-cyan);">■ 基本発表（必須 / 3分以内）</h3>
+                    <ul class="guideline-list">
+                        <li>スライドは<strong>最大3枚</strong>（超過したスライドは使用不可）</li>
+                        <li>スライド構成の推奨：①課題・テーマ解釈　②アイデア・価値　③体験イメージ</li>
+                        <li>3分を超えた場合、審査員が発表を止めることがあります</li>
+                        <li>成果物のデモを含めること（ライブデモ・動画・スクリーンショット等）</li>
+                    </ul>
+
+                    <div class="prompt-block">
+                        <div class="prompt-block-header">
+                            <span class="prompt-block-label">スライド構成サンプルプロンプト</span>
+                            <button class="prompt-copy-btn" onclick="copyPrompt(this)" title="コピー"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+                        </div>
+                        <pre class="prompt-pre" id="slidePrompt"># スライド1：テーマ解釈 / 課題
+- 当日テーマの解釈（どう捉えたか）
+- なぜその解釈を選んだか（捨てた選択も含めて）
+- 解決したい体験 / 課題
+
+# スライド2：アイデア / 価値
+- 作ったもののコンセプト（何を作ったか）
+- ユーザーにとっての価値（何が嬉しいか）
+- 他と違うポイント（なぜこれが成立するか）
+
+# スライド3：体験 / デモ
+- 実際の使い方（ユーザーストーリー）
+- デモの流れ（何が起きるか）
+- 現時点の完成度と、あえて削ったもの</pre>
+                    </div>
+
+                    <h3 style="font-size: 1.1rem; font-weight: 700; margin: var(--spacing-md) 0 var(--spacing-sm); color: var(--film-cyan);">■ 技術解説（任意 / 最大2分）</h3>
+                    <ul class="guideline-list">
+                        <li>アーキテクチャ・システム構成の説明</li>
+                        <li>技術選定の理由・根拠</li>
+                        <li>AIの使い方・プロンプト設計等</li>
+                    </ul>
+                    <div class="guideline-note">
+                        技術解説は発表点数に直接影響しませんが、技術加点（最大＋8点）の評価材料になります。技術的な工夫がある場合は積極的にアピールしてください。
+                    </div>
+                </div>
+
+                <!-- 5. 審査基準 -->
+                <div class="guideline-section">
+                    <h2 class="guideline-section-title">
+                        <span class="num">05</span>審査基準
+                    </h2>
+                    <p>審査は「ベース評価」と「技術加点」の2段階で行います。合計最大18点。</p>
+
+                    <table class="judging-table">
+                        <thead>
+                            <tr>
+                                <th>評価項目</th>
+                                <th>配点</th>
+                                <th>評価内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>① インパクト</td>
+                                <td class="score-col">0〜5点</td>
+                                <td>欲しい・面白い・驚きがあるか</td>
+                            </tr>
+                            <tr>
+                                <td>② 実在感</td>
+                                <td class="score-col">0〜5点</td>
+                                <td>実際に使われるイメージが湧くか</td>
+                            </tr>
+                            <tr>
+                                <td>③ 動作レベル</td>
+                                <td class="score-col">0〜2点</td>
+                                <td>モックレベルで一連の体験が成立するか、実際のシステムとして動くか</td>
+                            </tr>
+                            <tr>
+                                <td>④ 公開・再現性</td>
+                                <td class="score-col">0〜2点</td>
+                                <td>成果物公開をGitHub等で行っているか、公開URLなどで実際にアクセスし体験できるか</td>
+                            </tr>
+                            <tr>
+                                <td>⑤ 設計・技術選定</td>
+                                <td class="score-col">0〜2点</td>
+                                <td>技術選定が合理的で構造的か</td>
+                            </tr>
+                            <tr>
+                                <td>⑥ システム連携</td>
+                                <td class="score-col">0〜2点</td>
+                                <td>複数要素が構造的に連携しているか</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="guideline-note">
+                        <strong>評価方針：</strong><br>
+                        アイデアのみ・技術のみの評価は行いません。ユーザー体験として成立しているかを最重視します。技術は義務ではありませんが、強力な加点要素です。
+                    </div>
+                </div>
+
+                <!-- 6. 著作権・権利 -->
+                <div class="guideline-section">
+                    <h2 class="guideline-section-title">
+                        <span class="num">06</span>著作権・権利について
+                    </h2>
+                    <p>
+                        成果物の著作権は引き続き<strong>参加者に帰属</strong>します。主催者が権利を取得することはありません。
+                    </p>
+                    <p>ただし、参加をもって、主催者が以下の目的で成果物を使用・公開することを許諾いただいたものとみなします。</p>
+                    <ul class="guideline-list">
+                        <li>イベントの記録・広報（SNS、ウェブサイト等）</li>
+                        <li>今後のイベント運営・告知への活用</li>
+                    </ul>
+                    <p>使用する素材・ライブラリ・APIの利用規約については、参加者自身で確認・遵守してください。</p>
+                </div>
+
+                <!-- 7. 禁止コンテンツ -->
+                <div class="guideline-section">
+                    <h2 class="guideline-section-title">
+                        <span class="num">07</span>禁止コンテンツ
+                    </h2>
+                    <p>以下を含む成果物・発表は禁止します。</p>
+                    <ul class="guideline-list danger">
+                        <li>法令に反する内容、犯罪の教唆・助長</li>
+                        <li>差別・ヘイトスピーチ・暴力の扇動</li>
+                        <li>虚偽情報の意図的な拡散を目的とする表現</li>
+                        <li>児童ポルノ・リベンジポルノ、その他重大な人権侵害</li>
+                        <li>その他、公序良俗に反する内容</li>
+                    </ul>
+                    <div class="guideline-warning">
+                        AIで生成した素材であっても、上記の禁止事項が適用されます。生成AIの使用を理由に違法・不当なコンテンツが正当化されることはありません。
+                    </div>
+                </div>
+
+                <!-- 8. 主催者の裁量 -->
+                <div class="guideline-section">
+                    <h2 class="guideline-section-title">
+                        <span class="num">08</span>主催者の判断について
+                    </h2>
+                    <p>
+                        本ガイドラインに重大に反すると判断した場合、主催者は参加者を失格とし、表彰の取消等の措置を行うことがあります。
+                    </p>
+                    <p>
+                        審査内容・結果に関する最終判断は主催者に委ねられます。不明点があれば、エントリー前にDiscordでお気軽にご相談ください。
+                    </p>
+                    <div class="guideline-note">
+                        技術的トラブル・通信環境・会場設備の都合等により、進行内容や時間配分が変更となる場合があります。あらかじめご了承ください。
+                    </div>
+                </div>
+
+                <div class="guideline-footer-note">
+                    <p>ご不明な点は <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer">Discord（札幌すごいAI会）</a> でお気軽にどうぞ。</p>
+                    <p style="margin-top: 0.5rem;">主催：札幌すごいAI会 / AIサムライ 岸本悠佑</p>
+                    <p style="margin-top: 1rem;"><a href="conditions.html" target="_blank" rel="noopener noreferrer">参加規約を確認する →</a></p>
+                    <p style="margin-top: 1.5rem;"><a href="index.html">← トップページに戻る</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-festival">本イベントは「札幌すごいAIまつり 2026夏」の一環として開催されます。</p>
+                <p>&copy; 2026 札幌すごいAI会 All rights reserved.</p>
+                <p class="footer-hashtag">#札幌すごいAIハッカソン</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const ICON_COPY  = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+        const ICON_CHECK = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+        function copyPrompt(btn) {
+            const pre = btn.closest('.prompt-block').querySelector('.prompt-pre');
+            navigator.clipboard.writeText(pre.textContent).then(() => {
+                btn.innerHTML = ICON_CHECK;
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerHTML = ICON_COPY;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

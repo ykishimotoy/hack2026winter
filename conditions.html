@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参加規約 | 札幌すごいAIハッカソン 2026夏</title>
+    <meta name="description" content="札幌すごいAIハッカソン 2026夏の参加規約です。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="参加規約 | 札幌すごいAIハッカソン 2026夏">
+    <meta property="og:description" content="札幌すごいAIハッカソン 2026夏の参加規約です。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hack-2026-summer.sugoiai.org/conditions.html">
+    <meta property="og:site_name" content="札幌すごいAIハッカソン 2026夏">
+    <meta property="og:image" content="https://hack-2026-summer.sugoiai.org/images/logot.png">
+    <meta property="og:locale" content="ja_JP">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="参加規約 | 札幌すごいAIハッカソン 2026夏">
+    <meta name="twitter:description" content="札幌すごいAIハッカソン 2026夏の参加規約です。">
+    <meta name="twitter:image" content="https://hack-2026-summer.sugoiai.org/images/logot.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logot.png">
+    <link rel="apple-touch-icon" href="images/logot.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .conditions-hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(ellipse at center top, #1a1400 0%, var(--dark-bg) 60%);
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: var(--spacing-md);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: var(--film-cyan);
+            transform: translateX(-4px);
+        }
+
+        .conditions-body {
+            background: var(--dark-surface);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .conditions-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .conditions-intro {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: var(--spacing-xl);
+            padding: var(--spacing-md);
+            background: var(--dark-elevated);
+            border-left: 4px solid var(--film-purple);
+            border-radius: 8px;
+        }
+
+        .conditions-article {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .conditions-article-title {
+            font-size: 1.3rem;
+            font-weight: 900;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid rgba(255, 214, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .conditions-article-title .article-num {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .conditions-article p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .conditions-article p strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .conditions-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--spacing-sm) 0;
+        }
+
+        .conditions-list li {
+            padding: 0.5rem 0 0.5rem 1.6rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+            line-height: 1.8;
+            border-bottom: 1px solid rgba(255, 214, 0, 0.07);
+        }
+
+        .conditions-list li:last-child {
+            border-bottom: none;
+        }
+
+        .conditions-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--film-purple);
+        }
+
+        .conditions-list.danger li::before {
+            content: "✕";
+            color: #e05555;
+        }
+
+        .conditions-note {
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: rgba(255, 214, 0, 0.08);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 214, 0, 0.2);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .conditions-footer-note {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 214, 0, 0.2);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.9;
+        }
+
+        .conditions-footer-note a {
+            color: var(--film-purple);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .conditions-footer-note a:hover {
+            color: var(--film-cyan);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="conditions-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">← トップページに戻る</a>
+            <h1 class="hero-title" style="animation: none;">
+                <span class="title-main" style="font-size: clamp(1.8rem, 5vw, 3rem);">参加規約</span>
+                <span class="title-sub">札幌すごいAIハッカソン 2026夏</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div class="conditions-body">
+        <div class="container">
+            <div class="conditions-content">
+
+                <p class="conditions-intro">
+                    本規約は、札幌すごいAIハッカソン 2026夏（以下「本イベント」といいます）に参加される皆様（以下「参加者」といいます）に適用されます。<br>
+                    <strong>参加申込みをもって、本規約に同意したものとみなします。</strong>
+                </p>
+
+                <!-- 第1条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第1条</span>目的
+                    </h2>
+                    <p>
+                        本イベントは、限られた時間の中でアイデアおよび技術を活用し、新たな価値創出に挑戦する場を提供することを目的とします。
+                        主催者は、参加者が安心して創作活動を行える環境の整備に努めます。
+                    </p>
+                </div>
+
+                <!-- 第2条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第2条</span>参加資格
+                    </h2>
+                    <ul class="conditions-list">
+                        <li>年齢・職業を問わず、どなたでも参加可能です。</li>
+                        <li>個人またはチームでの参加が可能です。</li>
+                        <li>本規約に同意いただける方に限り参加できます。</li>
+                    </ul>
+                </div>
+
+                <!-- 第3条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第3条</span>成果物
+                    </h2>
+                    <ul class="conditions-list">
+                        <li>成果物は、原則としてイベント時間内に制作されたものを対象とします。</li>
+                        <li>モックアップ、プロトタイプ等の未完成の成果物も提出可能です。</li>
+                        <li>既存資産（コード、素材等）の利用は可能ですが、当日の創作内容が評価対象となります。</li>
+                    </ul>
+                </div>
+
+                <!-- 第4条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第4条</span>使用技術および素材
+                    </h2>
+                    <ul class="conditions-list">
+                        <li>使用する技術・ツールに制限はありません。</li>
+                        <li>AIツールの利用は任意とします。</li>
+                        <li>外部サービスや素材を利用する場合は、各利用規約および法令を遵守してください。</li>
+                        <li>使用する素材、データ、AI生成物等については、参加者自身の責任において適法に利用するものとします。</li>
+                    </ul>
+                </div>
+
+                <!-- 第5条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第5条</span>知的財産権
+                    </h2>
+                    <ul class="conditions-list">
+                        <li>成果物に関する著作権は、原則として参加者またはチームに帰属します。</li>
+                        <li>チームで参加する場合、権利の帰属および利用方法については、参加者間で適切に取り決めるものとします。</li>
+                        <li>参加者は、第三者の権利（著作権、商標権、肖像権等）を侵害しないよう十分に注意してください。</li>
+                    </ul>
+                </div>
+
+                <!-- 第6条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第6条</span>主催者による利用
+                    </h2>
+                    <p>
+                        参加者は、主催者に対し、成果物および発表内容について、<strong>非独占的かつ無償で利用する権利</strong>を許諾するものとします。
+                    </p>
+                    <p>利用目的は以下を含みます。</p>
+                    <ul class="conditions-list">
+                        <li>イベントの広報（Webサイト、SNS等）</li>
+                        <li>イベント記録およびレポート</li>
+                        <li>今後のイベント運営・告知</li>
+                    </ul>
+                    <p>利用にあたり、必要な範囲で編集（トリミング、要約等）を行う場合があります。</p>
+                </div>
+
+                <!-- 第7条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第7条</span>参加者情報の利用
+                    </h2>
+                    <p>主催者は、以下の目的のため、参加者情報を利用する場合があります。</p>
+                    <ul class="conditions-list">
+                        <li>イベントの事前広報（参加者紹介等）</li>
+                        <li>イベント当日の記録および配信</li>
+                        <li>イベント終了後のレポートおよびSNS掲載</li>
+                    </ul>
+                    <p>利用される情報には、以下が含まれる場合があります。</p>
+                    <ul class="conditions-list">
+                        <li>氏名またはハンドルネーム</li>
+                        <li>所属（任意）</li>
+                        <li>発表内容および成果物</li>
+                        <li>写真・映像等</li>
+                    </ul>
+                </div>
+
+                <!-- 第8条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第8条</span>撮影および配信
+                    </h2>
+                    <ul class="conditions-list">
+                        <li>本イベントでは、写真および動画の撮影、配信を行う場合があります。</li>
+                        <li>参加者は、これらが広報および記録として利用されることに同意するものとします。</li>
+                    </ul>
+                </div>
+
+                <!-- 第9条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第9条</span>禁止事項
+                    </h2>
+                    <p>参加者は、以下の行為を行ってはなりません。</p>
+                    <ul class="conditions-list danger">
+                        <li>法令に違反する行為、またはそのおそれのある行為</li>
+                        <li>公序良俗に反する行為</li>
+                        <li>第三者の権利を侵害する行為</li>
+                        <li>差別、誹謗中傷、攻撃的表現を含む行為</li>
+                        <li>成果物の盗用、虚偽申告等の不正行為</li>
+                        <li>その他、主催者が不適切と判断する行為</li>
+                    </ul>
+                </div>
+
+                <!-- 第10条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第10条</span>失格および措置
+                    </h2>
+                    <p>主催者は、以下の場合に参加者を失格とすることができます。</p>
+                    <ul class="conditions-list">
+                        <li>本規約に違反した場合</li>
+                        <li>不正行為が認められた場合</li>
+                        <li>運営の指示に従わない場合</li>
+                    </ul>
+                    <p>審査内容および結果に関する最終的な判断は、主催者に帰属します。</p>
+                </div>
+
+                <!-- 第11条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第11条</span>免責事項
+                    </h2>
+                    <ul class="conditions-list">
+                        <li>開発環境や通信環境等に起因する不具合について、主催者は責任を負いません。</li>
+                        <li>参加者間または第三者との間で生じたトラブルについて、主催者は関与しません。</li>
+                        <li>本イベントに関連して参加者に生じた損害について、主催者は故意または重大な過失がある場合を除き責任を負いません。</li>
+                    </ul>
+                </div>
+
+                <!-- 第12条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第12条</span>個人情報の取扱い
+                    </h2>
+                    <p>
+                        主催者は、取得した個人情報を適切に管理し、本イベントの運営目的の範囲内で利用します。
+                    </p>
+                </div>
+
+                <!-- 第13条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第13条</span>規約の変更
+                    </h2>
+                    <p>
+                        主催者は、必要に応じて本規約を変更することがあります。
+                        変更後の規約は、公開時点より効力を生じるものとします。
+                    </p>
+                </div>
+
+                <!-- 第14条 -->
+                <div class="conditions-article">
+                    <h2 class="conditions-article-title">
+                        <span class="article-num">第14条</span>同意
+                    </h2>
+                    <p>
+                        参加申込みをもって、本規約に同意したものとみなします。
+                    </p>
+                </div>
+
+                <div class="conditions-footer-note">
+                    <p>ご不明な点は <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer">Discord（札幌すごいAI会）</a> でお気軽にどうぞ。</p>
+                    <p style="margin-top: 0.5rem;">主催：札幌すごいAI会 / AIサムライ 岸本悠佑</p>
+                    <p style="margin-top: 1.5rem;"><a href="index.html">← トップページに戻る</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-festival">本イベントは「札幌すごいAIまつり 2026夏」の一環として開催されます。</p>
+                <p>&copy; 2026 札幌すごいAI会 All rights reserved.</p>
+                <p class="footer-hashtag">#札幌すごいAIハッカソン</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
