@@ -1,20 +1,22 @@
-// ─── i18n: JP / EN / CH 切り替え ───
+// ─── i18n: JP / EN / CN / FR / DE 切り替え ───
 // 日本語は HTML に書かれた原文をそのまま使用（初期化時に保存）。
-// EN / ZH は下記の辞書から innerHTML を差し替える。
+// EN / ZH / FR / DE は下記の辞書から innerHTML を差し替える。
 (function () {
     'use strict';
 
     const PAGE_TITLE = {
-        ja: '札幌すごいAIハッカソン 2026夏 | AI駆動開発ハッカソン',
-        en: 'Sapporo Sugoi AI Hackathon 2026 Summer | AI-Driven Development Hackathon',
-        zh: '札幌Sugoi AI黑客松 2026夏 | AI驱动开发黑客松'
+        ja: '札幌すごいAIハッカソン 2026冬 | AI駆動開発ハッカソン',
+        en: 'Sapporo Sugoi AI Hackathon 2026 Winter | AI-Driven Development Hackathon',
+        zh: '札幌Sugoi AI黑客松 2026冬 | AI驱动开发黑客松',
+        fr: 'Sapporo Sugoi AI Hackathon Hiver 2026 | Hackathon de développement piloté par l’IA',
+        de: 'Sapporo Sugoi AI Hackathon Winter 2026 | KI-gesteuerter Entwicklungs-Hackathon'
     };
 
     const I18N = {
         en: {
             // Hero
             'hero.badge': 'Entries Now Open',
-            'hero.title': 'Sapporo Sugoi AI Hackathon<br>2026 Summer',
+            'hero.title': 'Sapporo Sugoi AI Hackathon<br>2026 Winter',
             'hero.tagline': 'Build a world in 2 hours.<br>An AI-driven development hackathon.',
             'hero.info1': 'On-site in Sapporo',
             'hero.info2': 'Solo or team entry OK',
@@ -48,7 +50,7 @@
             'ov.p1': 'Compress thinking, building, and presenting into 2 hours. What do you choose, what do you cut, and what do you bring to life within the time limit? This is a competition of decision-making.',
             'ov.p2': 'Whoever manages to build something whose value clearly comes across wins here.',
             'ov.l1': 'Date &amp; Time',
-            'ov.v1': 'Saturday, August 29, 2026, 14:00–18:00',
+            'ov.v1': 'Saturday, December 5, 2026, 14:00–18:00',
             'ov.l2': 'Venue',
             'ov.l3': 'Fee',
             'ov.v3': 'Free',
@@ -212,7 +214,7 @@
             'org.discord': '💬 Discord: Sapporo Sugoi AI-kai',
             'org.mail': '✉️ Contact by Email',
             // Footer
-            'ft.logo': 'Sapporo Sugoi AI Hackathon 2026 Summer',
+            'ft.logo': 'Sapporo Sugoi AI Hackathon 2026 Winter',
             'ft.l1': 'Overview',
             'ft.l2': 'Event Flow',
             'ft.l3': 'Timeline',
@@ -221,14 +223,14 @@
             'ft.l6': 'Terms',
             'ft.info1': 'Organizer: Sapporo Sugoi AI-kai',
             'ft.info2': 'Venue: Deep Tech CORE SAPPORO',
-            'ft.festival': 'This event is held as part of Sapporo Sugoi AI Matsuri 2026 Summer.',
+            'ft.festival': 'This event is held as part of Sapporo Sugoi AI Matsuri 2026 Winter.',
             'ft.copy': '&copy; 2026 Sapporo Sugoi AI-kai All rights reserved.',
             'ft.disclaimer': '* This event is run by individual volunteers and does not represent any specific company or commercial organization.'
         },
         zh: {
             // Hero
             'hero.badge': '报名进行中',
-            'hero.title': '札幌Sugoi AI黑客松<br>2026夏',
+            'hero.title': '札幌Sugoi AI黑客松<br>2026冬',
             'hero.tagline': '用2小时，创造一个世界。<br>AI驱动开发黑客松。',
             'hero.info1': '札幌线下举办',
             'hero.info2': '个人・团队均可参加',
@@ -262,7 +264,7 @@
             'ov.p1': '将思考、实现、发表压缩进2小时。在有限的时间里选择什么、舍弃什么、实现什么——这里比拼的正是这种决策力。',
             'ov.p2': '能够做出“让价值得以传达”的作品的人，就是这里的赢家。',
             'ov.l1': '日期时间',
-            'ov.v1': '2026年8月29日（周六）14:00〜18:00',
+            'ov.v1': '2026年12月5日（周六）14:00〜18:00',
             'ov.l2': '会场',
             'ov.l3': '参加费',
             'ov.v3': '免费',
@@ -426,7 +428,7 @@
             'org.discord': '💬 Discord：札幌Sugoi AI会',
             'org.mail': '✉️ 邮件咨询',
             // Footer
-            'ft.logo': '札幌Sugoi AI黑客松 2026夏',
+            'ft.logo': '札幌Sugoi AI黑客松 2026冬',
             'ft.l1': '活动概要',
             'ft.l2': '体验流程',
             'ft.l3': '时间安排',
@@ -435,15 +437,445 @@
             'ft.l6': '参加条款',
             'ft.info1': '主办：札幌Sugoi AI会',
             'ft.info2': '会场：Deep Tech CORE SAPPORO',
-            'ft.festival': '本活动作为“札幌Sugoi AI祭 2026夏”的一部分举办。',
+            'ft.festival': '本活动作为“札幌Sugoi AI祭 2026冬”的一部分举办。',
             'ft.copy': '&copy; 2026 札幌Sugoi AI会 版权所有',
             'ft.disclaimer': '※本活动为个人志愿者活动，不代表任何特定企业或营利团体。'
+        },
+        fr: {
+            // Hero
+            'hero.badge': 'Inscriptions ouvertes',
+            'hero.title': 'Sapporo Sugoi AI Hackathon<br>Hiver 2026',
+            'hero.tagline': 'Créez un monde en 2 heures.<br>Un hackathon de développement piloté par l’IA.',
+            'hero.info1': 'En présentiel à Sapporo',
+            'hero.info2': 'Participation en solo ou en équipe',
+            'hero.info3': 'Gratuit',
+            'hero.cta.entry': 'S’inscrire',
+            'hero.cta.overview': 'Voir les détails de l’événement',
+            // Winners
+            'sec.winners': 'Lauréats',
+            'award.grand': 'Grand Prix',
+            'award.nttdmse': 'Prix NTT DATA MSE',
+            'award.hp': 'Prix HP',
+            'award.eques': 'Prix EQUES',
+            'award.samurai': 'Prix AI Samurai',
+            'award.nakamura': 'Prix Nakamura',
+            'award.bonjiko': 'Prix Bonjiko',
+            'win.1.name': 'Hideki Fukuda (A-kun)',
+            'win.1.aff': 'Infiniteloop Inc.',
+            'win.2.name': 'Rakuto Yamazaki (Rakku)',
+            'win.2.aff': 'Université des sciences de Hokkaido',
+            'win.3.name': 'Yuta Machihara (kociden)',
+            'win.3.aff': 'Université de Hokkaido',
+            'win.4.name': 'Genki Osawa (Maikeru-san)',
+            'win.4.aff': 'Participant individuel',
+            'win.5.name': 'Taiga Koida (koitan)',
+            'win.5.aff': 'Unitia Inc.',
+            'win.6.name': 'Équipe « Ramen Oishii »<br>Kazuchika Kawamura &amp; Yuma Kawamura',
+            'win.6.aff': 'Participants individuels',
+            // Overview
+            'sec.overview': 'Présentation de l’événement',
+            'ov.subtitle': 'Le développement piloté par l’IA, en direct à Sapporo.',
+            'ov.p1': 'Réfléchir, construire et présenter, le tout condensé en 2 heures. Que choisissez-vous, que laissez-vous de côté, et que parvenez-vous à concrétiser dans le temps imparti ? C’est une compétition de prise de décision.',
+            'ov.p2': 'Celui qui parvient à construire quelque chose dont la valeur se perçoit clairement remporte la partie.',
+            'ov.l1': 'Date &amp; horaires',
+            'ov.v1': 'samedi 5 décembre 2026, 14:00–18:00',
+            'ov.l2': 'Lieu',
+            'ov.l3': 'Frais',
+            'ov.v3': 'Gratuit',
+            'ov.l4': 'Format',
+            'ov.v4': 'En présentiel (participation en solo ou en équipe)',
+            'ov.l5': 'Taille de l’équipe',
+            'ov.v5': '1 à 4 personnes (participation en solo bienvenue)',
+            'ov.l6': 'Inscription',
+            'ov.v6': 'Inscrivez-vous via le <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">formulaire d’inscription</a>',
+            // About
+            'sec.about': 'À propos de l’événement',
+            'about.quote': 'Sous contraintes, que choisissez-vous et que laissez-vous de côté ?<br>Cette prise de décision devient elle-même une valeur.<span class="about-origin-sig">Message central du hackathon de développement piloté par l’IA</span>',
+            'about.lead': 'À l’ère de l’IA, la vitesse de mise en œuvre est une valeur.',
+            'about.p1': 'Présenter la valeur compte plus que la finition. Cet événement est une compression extrême de cette expérience : nous évaluons vos décisions et votre expression dans un temps limité.',
+            'about.p2': 'Ici, la question n’est pas ce que vous avez construit, mais ce que vous avez gardé et ce que vous avez écarté.',
+            'about.f1': 'Une expérience condensée : réfléchir → construire → présenter',
+            'about.f2': 'Séance d’initiation le jour même pour les débutants et les novices',
+            'about.f3': 'Les experts peuvent apporter tout ce qu’ils veulent',
+            // Partners
+            'sec.partners': 'Sponsors',
+            'partners.desc': 'Ces entreprises, organisations et services sponsors soutiennent ce hackathon.<br>Nous les remercions chaleureusement pour leur généreux soutien.',
+            'partners.nttdmse': 'NTT DATA MSE Corporation',
+            'partners.hp': 'HP Japan Inc.',
+            'partners.eques': 'EQUES Inc.',
+            'partners.dtc': 'DTC Inc.',
+            'partners.hanamiiDoc': 'Télécharger le guide d’utilisation',
+            'partners.sapporoLogo': 'Ville de Sapporo',
+            'partners.sapporo': 'Avec le soutien de la Ville de Sapporo',
+            // Flow
+            'sec.flow': 'Déroulement de l’événement',
+            'flow.desc': 'Tout se passe en une journée : de l’accueil à la remise des prix, voici comment cela se déroule.',
+            'flow.s1.title': 'Annonce du thème',
+            'flow.s1.desc': 'Dès le début de l’événement, le thème du jour est annoncé. Il laisse une grande place à l’interprétation : il n’y a pas une seule bonne réponse.',
+            'flow.s1.hl': 'Partez de <strong>votre propre interprétation</strong>',
+            'flow.s2.title': 'Idéation',
+            'flow.s2.desc': 'À partir du thème, décidez ce que vous allez construire. Pas besoin d’une idée parfaite : ce qui compte, c’est de fixer rapidement une direction.',
+            'flow.s2.hl': 'Décidez petit, <strong>avancez grand</strong>',
+            'flow.s3.title': 'Construction',
+            'flow.s3.desc': 'Utilisez les outils d’IA et la technologie pour donner vie à votre idée. Aucune restriction d’outils : visez un état où la valeur se perçoit.',
+            'flow.s3.hl': 'Utilisez <strong>tout ce que vous avez</strong>',
+            'flow.s3.note': 'Une session de 10 minutes pour débutants a lieu le jour même : même les novices peuvent démarrer en toute confiance.',
+            'flow.s4.title': 'Présentation',
+            'flow.s4.desc': 'Une présentation de 3 minutes avec 3 diapositives maximum. Partagez ce que vous avez construit et la réflexion qui l’a guidé, avec vos propres mots.',
+            'flow.s4.hl': 'Communiquer fait <strong>partie de la création</strong>',
+            // Rules
+            'sec.rules': 'Règles',
+            'rules.desc': 'Une grande liberté : c’est ce qui définit ce hackathon.',
+            'rules.card1.title': 'Règles de participation',
+            'rules.r1': 'Annoncez « Je participe ! » dans le salon du hackathon sur <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer" class="guideline-link">Discord (Sapporo Sugoi AI-kai)</a>',
+            'rules.r2': '<strong>Apportez ce que vous voulez</strong> : ordinateurs portables, périphériques externes, appareils physiques, casques VR, bibliothèques externes, code de dépôts publics, vos propres travaux passés… tout est permis',
+            'rules.r3': '<strong>Aucune restriction d’outils</strong> : utilisez n’importe quel outil, y compris l’IA',
+            'rules.r4': '<strong>En solo ou en équipe</strong> : de 1 à 4 personnes',
+            'rules.r5': 'L’apprentissage et la préparation en amont sont autorisés. Seule la production réalisée le jour même est évaluée.',
+            'rules.r6': 'Acceptez les <a href="conditions.html" target="_blank" rel="noopener noreferrer" class="guideline-link">Conditions de participation</a>',
+            'rules.note': 'Pour plus de détails, consultez les directives et les conditions ci-dessous.',
+            'rules.btn.guide': 'Règles &amp; directives',
+            'rules.btn.terms': 'Conditions de participation',
+            'rules.card2.title': 'Contraintes',
+            'rules.c1': 'Pas de création de diapositives pendant le temps de développement (14:10–16:10)',
+            'rules.c2': 'Présentation principale en 3 minutes maximum',
+            'rules.c3': '3 diapositives de présentation maximum',
+            'rules.c4': 'Explication technique facultative : jusqu’à 2 minutes supplémentaires',
+            // Theme
+            'sec.theme': 'Thème',
+            'theme.subtitle': 'Révélé le jour même',
+            'theme.p1': 'Le thème est annoncé au début de l’événement. Il est impossible de le connaître à l’avance.',
+            'theme.p2': 'Le thème est volontairement <strong>abstrait</strong>. Ce n’est pas une question avec une bonne réponse : il met à l’épreuve votre imagination et votre interprétation. Votre interprétation fait déjà partie de votre œuvre.',
+            'theme.l1': 'Format du thème',
+            'theme.v1': 'Thème abstrait (révélé le jour même)',
+            'theme.l2': 'Moment de l’annonce',
+            'theme.v2': '14:00–14:10 (juste après le début de l’événement)',
+            'theme.l3': 'Ce qui est évalué',
+            'theme.v3': 'Imagination, interprétation et rapidité de décision',
+            // Timeline
+            'sec.timeline': 'Programme',
+            'tl.desc': 'Un champ de bataille de réflexion et de construction, condensé en quatre heures.',
+            'tl.1.title': 'Annonce du thème',
+            'tl.1.desc': 'Le thème est dévoilé. Le compte à rebours de 2 heures commence ici.',
+            'tl.2.title': 'Développement (120 min)',
+            'tl.2.desc': 'Création de diapositives interdite. Utilisez l’IA et la technologie pour donner forme à votre idée : mobilisez tout ce que vous pouvez.',
+            'tl.3.title': 'Préparation de la présentation (30 min)',
+            'tl.3.desc': 'La création de diapositives est désormais autorisée. Clarifiez ce que vous voulez transmettre et tenez en 3 diapositives maximum.',
+            'tl.4.title': 'Présentations (60 min)',
+            'tl.4.desc': '3 minutes par équipe ou participant (+ 2 minutes d’explication technique facultative). Partagez ce que vous avez construit et la réflexion qui l’a guidé.',
+            'tl.5.title': 'Jury &amp; remise des prix',
+            'tl.5.desc': 'Le jury évalue toutes les œuvres, puis le Grand Prix et les Prix spéciaux du jury sont annoncés.',
+            // Output
+            'sec.output': 'Livrables &amp; présentation',
+            'out.desc': 'Pas besoin de terminer. Tant que la valeur se perçoit, c’est suffisant.',
+            'out.card1.title': 'Livrables',
+            'out.card1.sub': 'Une maquette suffit : c’est l’expérience qui compte avant tout. Et plus la réalisation technique est poussée, plus vous gagnez de points bonus.',
+            'out.d1': 'Prototype',
+            'out.d2': 'Maquette d’interface',
+            'out.d3': 'Démo IA',
+            'out.d4': 'Vidéo',
+            'out.d5': 'Tout autre format qui transmet la valeur',
+            'out.card2.title': 'Format de présentation',
+            'out.card2.sub': 'La présentation principale est obligatoire ; l’explication technique est facultative.',
+            'out.f1': '<strong>Présentation principale (obligatoire, 3 min)</strong><br>3 diapositives maximum<br>①&nbsp;Problème &amp; interprétation du thème&nbsp;②&nbsp;Idée &amp; valeur&nbsp;③&nbsp;Image de l’expérience<br>+ démo du produit',
+            'out.f2': '<strong>Explication technique (facultative, 2 min max)</strong><br>Architecture / choix techniques / utilisation de l’IA',
+            'out.prompt.label': 'Exemple de prompt pour la structure des diapositives',
+            'out.prompt.body': '# Diapositive 1 : Interprétation du thème / Problème\n- Votre interprétation du thème du jour\n- Pourquoi vous avez choisi cette interprétation (y compris ce que vous avez écarté)\n- L’expérience / le problème que vous voulez résoudre\n\n# Diapositive 2 : Idée / Valeur\n- Le concept de ce que vous avez construit\n- La valeur pour l’utilisateur (pourquoi cela le rend heureux)\n- Ce qui le distingue (pourquoi cela fonctionne)\n\n# Diapositive 3 : Expérience / Démo\n- Comment il est réellement utilisé (user story)\n- Le déroulé de la démo (ce qui se passe)\n- Le niveau d’achèvement actuel, et ce que vous avez délibérément écarté',
+            // Judging
+            'sec.judging': 'Critères d’évaluation',
+            'jd.desc': 'Des axes d’évaluation clairs qui en font une vraie compétition.',
+            'jd.base.title': 'Score de base (10 pts max)',
+            'jd.badge5': '0–5 pts',
+            'jd.badge2': '0–2 pts',
+            'jd.c1.name': '① Impact',
+            'jd.c1.desc': 'Est-ce que les gens en veulent ? Est-ce amusant ou surprenant ?',
+            'jd.c2.name': '② Crédibilité',
+            'jd.c2.desc': 'Peut-on l’imaginer réellement utilisé ?',
+            'jd.tech.title': 'Bonus technique (jusqu’à +8 pts)',
+            'jd.c3.name': '③ Niveau de fonctionnement',
+            'jd.c3.desc': 'L’expérience complète tient-elle au niveau d’une maquette, ou fonctionne-t-elle comme un vrai système ?',
+            'jd.c4.name': '④ Ouverture &amp; reproductibilité',
+            'jd.c4.desc': 'L’œuvre est-elle publiée sur GitHub ou ailleurs ? Peut-on y accéder et l’essayer via une URL publique ?',
+            'jd.c5.name': '⑤ Conception &amp; choix techniques',
+            'jd.c5.desc': 'Les choix techniques sont-ils rationnels et bien structurés ?',
+            'jd.c6.name': '⑥ Intégration système',
+            'jd.c6.desc': 'Plusieurs composants fonctionnent-ils ensemble de manière structurée ?',
+            'jd.policy.title': 'Politique d’évaluation',
+            'jd.policy.1': 'Les idées et la technologie sont évaluées ensemble, pas isolément',
+            'jd.policy.2': 'La cohérence en tant qu’expérience utilisateur est une priorité',
+            'jd.policy.3': 'Un travail technique approfondi n’est pas requis, mais constitue un puissant facteur bonus',
+            // Awards
+            'sec.awards': 'Prix',
+            'aw.desc': 'Le jury procède à l’évaluation finale et désigne les lauréats.',
+            'aw.1.title': 'Grand Prix',
+            'aw.1.div': '1 équipe ou participant',
+            'aw.1.desc': 'Décerné à l’équipe ou au participant ayant obtenu le score total le plus élevé (score de base + bonus technique).',
+            'aw.2.title': 'Prix spécial du jury',
+            'aw.2.div': 'Un par membre du jury',
+            'aw.2.desc': 'Choisi à la seule discrétion de chaque membre du jury. Indépendamment du score total, il récompense l’œuvre qui a été, pour ce juré, « la bonne ».',
+            // Judges
+            'sec.judges': 'Jury',
+            'judge.1.name': 'Yusuke Kishimoto',
+            'judge.1.title': 'Responsable de Sapporo Sugoi AI-kai<br>AI Samurai',
+            'judge.1.comment': 'Nous vivons à une époque où l’IA permet de créer des projets et des produits sur-le-champ. J’ai hâte de voir quelles expériences naîtront ici ! Novices, débutants et vétérans : venez tous relever le défi !',
+            'judge.2.name': 'Ryoma Kudo (Bonjiko)',
+            'judge.2.title': 'Responsable adjoint de Sapporo Sugoi AI-kai',
+            'judge.2.comment': 'Des idées étonnantes aux expériences qui touchent le cœur des gens : j’ai hâte de découvrir des produits de toutes sortes ! Amusons-nous ensemble avec le développement piloté par l’IA, une toute nouvelle façon de créer !',
+            'judge.4.name': 'Kenichiro Nakajima',
+            'judge.4.title': 'NTT DATA MSE Corporation<br>Bureau de la stratégie d’entreprise<br>Département Stratégie &amp; planification IA',
+            'judge.4.comment': 'J’ai vraiment hâte de voir naître à Sapporo une nouvelle culture du développement IA et un artisanat de nouvelle génération.<br>J’espère que ce sera une magnifique occasion pour les étudiants, les professionnels et les entreprises de se réunir au-delà des frontières pour relever le défi du développement piloté par l’IA, et d’en tirer de nombreux apprentissages et de nouvelles connexions. NTT DATA MSE souhaite également continuer à soutenir de telles initiatives issues des communautés locales.',
+            'judge.5.name': 'Hiroyuki Shoya',
+            'judge.5.title': 'HP Japan Inc.<br>Ventes Entreprises<br>Division Ventes de solutions, Département Développement commercial Workstations<br>Directeur, Développement du marché IA &amp; science des données',
+            'judge.5.comment': 'Construire un MVP (Minimum Viable Product) en seulement deux heures impliquera sans doute de faire tourner en parallèle plusieurs agents IA sur plusieurs spécifications, implémentations et tests. J’ai hâte de vous voir, vous que la terre du Nord a forgés, pousser l’IA jusqu’à ses limites absolues !',
+            'judge.3.name': 'Motoki Nakamura',
+            'judge.3.title': 'Staff de Sapporo Sugoi AI-kai / Passionné de harness<br>Celui qui fait vibrer Hokkaido avec l’IA',
+            'judge.3.comment': 'Je me souviens encore de mon émerveillement, la première fois que j’ai étudié la programmation, quand un simple bouton a fonctionné. Aujourd’hui, nous vivons à une époque où l’on peut construire une application en quelques heures rien qu’en expliquant son idée à une IA. À une époque aussi merveilleuse, ne pas construire n’est tout simplement pas une option. J’ai hâte de voir vos idées prendre forme !',
+            // Entry CTA
+            'cta.title': 'Créez un monde<br>en 2 heures.',
+            'cta.desc': 'Ingénieur, designer ou parfait débutant :<br>quiconque veut créer quelque chose avec l’IA et la technologie peut relever le défi.',
+            'cta.btn.entry': 'Accéder au formulaire d’inscription',
+            'cta.btn.discord': '💬 Poser une question sur Discord',
+            // Organizer
+            'sec.organizer': 'Organisateur',
+            'org.names': 'Organisateur : Yusuke Kishimoto<br>— AI Samurai —<br>Responsable de Sapporo Sugoi AI-kai',
+            'org.bio': 'Une communauté basée à Sapporo qui cultive l’apprentissage, le défi et le plaisir autour de l’IA. À travers des événements et des ateliers réguliers, nous faisons grandir le nombre de personnes capables de réellement maîtriser l’IA.',
+            'org.discord': '💬 Discord : Sapporo Sugoi AI-kai',
+            'org.mail': '✉️ Contact par e-mail',
+            // Footer
+            'ft.logo': 'Sapporo Sugoi AI Hackathon Hiver 2026',
+            'ft.l1': 'Présentation',
+            'ft.l2': 'Déroulement',
+            'ft.l3': 'Programme',
+            'ft.l4': 'Évaluation',
+            'ft.l5': 'Inscription',
+            'ft.l6': 'Conditions',
+            'ft.info1': 'Organisateur : Sapporo Sugoi AI-kai',
+            'ft.info2': 'Lieu : Deep Tech CORE SAPPORO',
+            'ft.festival': 'Cet événement fait partie du Sapporo Sugoi AI Matsuri Hiver 2026.',
+            'ft.copy': '&copy; 2026 Sapporo Sugoi AI-kai Tous droits réservés.',
+            'ft.disclaimer': '* Cet événement est organisé par des bénévoles à titre individuel et ne représente aucune entreprise ni organisation commerciale en particulier.'
+        },
+        de: {
+            // Hero
+            'hero.badge': 'Anmeldung geöffnet',
+            'hero.title': 'Sapporo Sugoi AI Hackathon<br>Winter 2026',
+            'hero.tagline': 'Erschaffe eine Welt in 2 Stunden.<br>Ein Hackathon für KI-gesteuerte Entwicklung.',
+            'hero.info1': 'Vor Ort in Sapporo',
+            'hero.info2': 'Teilnahme solo oder im Team',
+            'hero.info3': 'Kostenlos',
+            'hero.cta.entry': 'Jetzt anmelden',
+            'hero.cta.overview': 'Event-Details ansehen',
+            // Winners
+            'sec.winners': 'Gewinner',
+            'award.grand': 'Hauptpreis',
+            'award.nttdmse': 'NTT DATA MSE Award',
+            'award.hp': 'HP Award',
+            'award.eques': 'EQUES Award',
+            'award.samurai': 'AI Samurai Award',
+            'award.nakamura': 'Nakamura Award',
+            'award.bonjiko': 'Bonjiko Award',
+            'win.1.name': 'Hideki Fukuda (A-kun)',
+            'win.1.aff': 'Infiniteloop Inc.',
+            'win.2.name': 'Rakuto Yamazaki (Rakku)',
+            'win.2.aff': 'Hokkaido University of Science',
+            'win.3.name': 'Yuta Machihara (kociden)',
+            'win.3.aff': 'Universität Hokkaido',
+            'win.4.name': 'Genki Osawa (Maikeru-san)',
+            'win.4.aff': 'Einzelteilnehmer',
+            'win.5.name': 'Taiga Koida (koitan)',
+            'win.5.aff': 'Unitia Inc.',
+            'win.6.name': 'Team „Ramen Oishii“<br>Kazuchika Kawamura &amp; Yuma Kawamura',
+            'win.6.aff': 'Einzelteilnehmer',
+            // Overview
+            'sec.overview': 'Event-Übersicht',
+            'ov.subtitle': 'KI-gesteuerte Entwicklung, live in Sapporo.',
+            'ov.p1': 'Denken, Bauen und Präsentieren – komprimiert auf 2 Stunden. Was wählst du, was lässt du weg, und was bringst du innerhalb des Zeitlimits zum Leben? Das ist ein Wettbewerb der Entscheidungsfindung.',
+            'ov.p2': 'Wer es schafft, etwas zu bauen, dessen Wert klar erkennbar ist, gewinnt hier.',
+            'ov.l1': 'Datum &amp; Uhrzeit',
+            'ov.v1': 'Samstag, 5. Dezember 2026, 14:00–18:00',
+            'ov.l2': 'Veranstaltungsort',
+            'ov.l3': 'Teilnahmegebühr',
+            'ov.v3': 'Kostenlos',
+            'ov.l4': 'Format',
+            'ov.v4': 'Vor Ort (Teilnahme solo oder im Team)',
+            'ov.l5': 'Teamgröße',
+            'ov.v5': '1–4 Personen (Einzelteilnahme willkommen)',
+            'ov.l6': 'Anmeldung',
+            'ov.v6': 'Anmeldung über das <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">Anmeldeformular</a>',
+            // About
+            'sec.about': 'Über dieses Event',
+            'about.quote': 'Was wählst du, und was lässt du weg – unter Einschränkungen?<br>Diese Entscheidung selbst wird zum Wert.<span class="about-origin-sig">Kernbotschaft des Hackathons für KI-gesteuerte Entwicklung</span>',
+            'about.lead': 'Im KI-Zeitalter ist Umsetzungsgeschwindigkeit ein Wert.',
+            'about.p1': 'Den Wert zu präsentieren zählt mehr als Perfektion. Dieses Event ist eine extreme Verdichtung dieser Erfahrung – wir bewerten deine Entscheidungen und deinen Ausdruck in begrenzter Zeit.',
+            'about.p2': 'Hier wird nicht gefragt, was du gebaut hast, sondern was du behalten und was du weggelassen hast.',
+            'about.f1': 'Eine komprimierte Erfahrung: Denken → Bauen → Präsentieren',
+            'about.f2': 'Einführungssession am Veranstaltungstag für Neulinge und Einsteiger',
+            'about.f3': 'Profis dürfen alles mitbringen, was sie möchten',
+            // Partners
+            'sec.partners': 'Sponsoren',
+            'partners.desc': 'Diese Sponsoren – Unternehmen, Organisationen und Services – unterstützen diesen Hackathon.<br>Wir danken herzlich für die großzügige Unterstützung.',
+            'partners.nttdmse': 'NTT DATA MSE Corporation',
+            'partners.hp': 'HP Japan Inc.',
+            'partners.eques': 'EQUES Inc.',
+            'partners.dtc': 'DTC Inc.',
+            'partners.hanamiiDoc': 'Benutzerhandbuch herunterladen',
+            'partners.sapporoLogo': 'Stadt Sapporo',
+            'partners.sapporo': 'Mit Unterstützung der Stadt Sapporo',
+            // Flow
+            'sec.flow': 'Ablauf des Events',
+            'flow.desc': 'Alles passiert an einem Tag – vom Check-in bis zur Preisverleihung, so läuft es ab.',
+            'flow.s1.title': 'Bekanntgabe des Themas',
+            'flow.s1.desc': 'Direkt nach Beginn des Events wird das Thema des Tages bekannt gegeben. Es lässt viel Raum für Interpretation – es gibt nicht die eine richtige Antwort.',
+            'flow.s1.hl': 'Starte mit <strong>deiner eigenen Interpretation</strong>',
+            'flow.s2.title': 'Ideenfindung',
+            'flow.s2.desc': 'Entscheide auf Basis des Themas, was du bauen willst. Es muss keine perfekte Idee sein – schnell eine Richtung festzulegen ist das, was zählt.',
+            'flow.s2.hl': 'Klein entscheiden, <strong>groß handeln</strong>',
+            'flow.s3.title': 'Bauen',
+            'flow.s3.desc': 'Nutze KI-Tools und Technologie, um deine Idee zum Leben zu erwecken. Keine Einschränkungen bei den Tools – ziele auf einen Zustand, in dem der Wert erkennbar wird.',
+            'flow.s3.hl': 'Nutze <strong>alles, was du hast</strong>',
+            'flow.s3.note': 'Am Veranstaltungstag findet eine 10-minütige Einsteigersession statt – auch Neulinge können mit Zuversicht starten.',
+            'flow.s4.title': 'Präsentation',
+            'flow.s4.desc': 'Eine 3-minütige Präsentation mit bis zu 3 Folien. Teile, was du gebaut hast und welche Überlegungen dahinterstecken – in deinen eigenen Worten.',
+            'flow.s4.hl': 'Vermitteln ist <strong>Teil des Bauens</strong>',
+            // Rules
+            'sec.rules': 'Regeln',
+            'rules.desc': 'Ein hohes Maß an Freiheit – das macht diesen Hackathon aus.',
+            'rules.card1.title': 'Teilnahmeregeln',
+            'rules.r1': 'Erkläre „Ich bin dabei!“ im Hackathon-Kanal auf <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener noreferrer" class="guideline-link">Discord (Sapporo Sugoi AI-kai)</a>',
+            'rules.r2': '<strong>Bring alles mit</strong> – Laptops, externe Geräte, physische Geräte, VR-Geräte, externe Bibliotheken, Code aus öffentlichen Repositories, eigene frühere Arbeiten – alles ist erlaubt',
+            'rules.r3': '<strong>Keine Tool-Einschränkungen</strong> – nutze beliebige Tools, einschließlich KI',
+            'rules.r4': '<strong>Solo oder im Team</strong> – 1 bis 4 Personen',
+            'rules.r5': 'Vorheriges Lernen und Vorbereitung sind in Ordnung. Bewertet wird nur das, was am Veranstaltungstag entsteht.',
+            'rules.r6': 'Stimme den <a href="conditions.html" target="_blank" rel="noopener noreferrer" class="guideline-link">Teilnahmebedingungen</a> zu',
+            'rules.note': 'Details findest du in den Richtlinien und Bedingungen unten.',
+            'rules.btn.guide': 'Regeln &amp; Richtlinien',
+            'rules.btn.terms': 'Teilnahmebedingungen',
+            'rules.card2.title': 'Einschränkungen',
+            'rules.c1': 'Keine Folienerstellung während der Entwicklungszeit (14:10–16:10)',
+            'rules.c2': 'Hauptpräsentation innerhalb von 3 Minuten',
+            'rules.c3': 'Bis zu 3 Präsentationsfolien',
+            'rules.c4': 'Optionale technische Erläuterung: bis zu 2 zusätzliche Minuten',
+            // Theme
+            'sec.theme': 'Thema',
+            'theme.subtitle': 'Wird am Veranstaltungstag bekannt gegeben',
+            'theme.p1': 'Das Thema wird zu Beginn des Events bekannt gegeben. Es gibt keine Möglichkeit, es vorab zu erfahren.',
+            'theme.p2': 'Das Thema ist bewusst <strong>abstrakt</strong>. Es ist keine Frage mit einer richtigen Antwort – es prüft deine Vorstellungskraft und Interpretation. Deine Interpretation ist bereits Teil deines Werks.',
+            'theme.l1': 'Themenformat',
+            'theme.v1': 'Abstraktes Thema (Bekanntgabe am Veranstaltungstag)',
+            'theme.l2': 'Zeitpunkt der Bekanntgabe',
+            'theme.v2': '14:00–14:10 (direkt nach Beginn des Events)',
+            'theme.l3': 'Was geprüft wird',
+            'theme.v3': 'Vorstellungskraft, Interpretation und Entscheidungsgeschwindigkeit',
+            // Timeline
+            'sec.timeline': 'Zeitplan',
+            'tl.desc': 'Ein Schlachtfeld aus Denken und Bauen, verdichtet auf vier Stunden.',
+            'tl.1.title': 'Bekanntgabe des Themas',
+            'tl.1.desc': 'Das Thema wird veröffentlicht. Der 2-Stunden-Countdown beginnt hier.',
+            'tl.2.title': 'Entwicklung (120 Min.)',
+            'tl.2.desc': 'Keine Folienerstellung erlaubt. Nutze KI und Technologie, um deiner Idee Gestalt zu geben – setze alles ein, was du kannst.',
+            'tl.3.title': 'Präsentationsvorbereitung (30 Min.)',
+            'tl.3.desc': 'Folienerstellung ist jetzt erlaubt. Kläre, was du vermitteln willst, und bring es auf maximal 3 Folien.',
+            'tl.4.title': 'Präsentationen (60 Min.)',
+            'tl.4.desc': '3 Minuten pro Team oder Einzelperson (+ optionale 2-minütige technische Erläuterung). Teile, was du gebaut hast und welche Überlegungen dahinterstecken.',
+            'tl.5.title': 'Jury &amp; Preisverleihung',
+            'tl.5.desc': 'Die Jury bewertet alle Werke, anschließend werden der Hauptpreis und die Sonderpreise der Jury bekannt gegeben.',
+            // Output
+            'sec.output': 'Ergebnisse &amp; Präsentation',
+            'out.desc': 'Du musst nicht fertig werden. Solange der Wert erkennbar ist, reicht das.',
+            'out.card1.title': 'Ergebnisse',
+            'out.card1.sub': 'Mock-ups sind in Ordnung – das Erlebnis zählt am meisten. Und je tiefer die technische Umsetzung, desto mehr Bonuspunkte.',
+            'out.d1': 'Prototyp',
+            'out.d2': 'UI-Mock-up',
+            'out.d3': 'KI-Demo',
+            'out.d4': 'Video',
+            'out.d5': 'Alles andere, was den Wert vermittelt',
+            'out.card2.title': 'Präsentationsformat',
+            'out.card2.sub': 'Die Hauptpräsentation ist Pflicht; die technische Erläuterung ist optional.',
+            'out.f1': '<strong>Hauptpräsentation (Pflicht, 3 Min.)</strong><br>Bis zu 3 Folien<br>①&nbsp;Problem &amp; Interpretation des Themas&nbsp;②&nbsp;Idee &amp; Wert&nbsp;③&nbsp;Erlebnisbild<br>+ Produktdemo',
+            'out.f2': '<strong>Technische Erläuterung (optional, bis zu 2 Min.)</strong><br>Architektur / Technologieentscheidungen / Einsatz von KI',
+            'out.prompt.label': 'Beispiel-Prompt für die Folienstruktur',
+            'out.prompt.body': '# Folie 1: Interpretation des Themas / Problem\n- Deine Interpretation des Tagesthemas\n- Warum du diese Interpretation gewählt hast (einschließlich dessen, was du verworfen hast)\n- Das Erlebnis / Problem, das du lösen willst\n\n# Folie 2: Idee / Wert\n- Das Konzept dessen, was du gebaut hast\n- Der Wert für die Nutzer (warum es sie glücklich macht)\n- Was es besonders macht (warum es funktioniert)\n\n# Folie 3: Erlebnis / Demo\n- Wie es tatsächlich genutzt wird (User Story)\n- Der Ablauf der Demo (was passiert)\n- Aktueller Fertigstellungsgrad und was du bewusst weggelassen hast',
+            // Judging
+            'sec.judging': 'Bewertungskriterien',
+            'jd.desc': 'Klare Bewertungsachsen, die daraus einen echten Wettbewerb machen.',
+            'jd.base.title': 'Basispunktzahl (max. 10 Pkt.)',
+            'jd.badge5': '0–5 Pkt.',
+            'jd.badge2': '0–2 Pkt.',
+            'jd.c1.name': '① Wirkung',
+            'jd.c1.desc': 'Wollen die Leute es haben? Macht es Spaß oder überrascht es?',
+            'jd.c2.name': '② Glaubwürdigkeit',
+            'jd.c2.desc': 'Kann man sich vorstellen, dass es tatsächlich genutzt wird?',
+            'jd.tech.title': 'Technik-Bonus (bis zu +8 Pkt.)',
+            'jd.c3.name': '③ Funktionsgrad',
+            'jd.c3.desc': 'Funktioniert das gesamte Erlebnis auf Mock-Ebene, oder läuft es als echtes System?',
+            'jd.c4.name': '④ Offenheit &amp; Reproduzierbarkeit',
+            'jd.c4.desc': 'Ist das Werk auf GitHub o. Ä. veröffentlicht? Kann man es über eine öffentliche URL aufrufen und ausprobieren?',
+            'jd.c5.name': '⑤ Design &amp; Technologieentscheidungen',
+            'jd.c5.desc': 'Sind die technischen Entscheidungen sinnvoll und gut strukturiert?',
+            'jd.c6.name': '⑥ Systemintegration',
+            'jd.c6.desc': 'Arbeiten mehrere Komponenten strukturiert zusammen?',
+            'jd.policy.title': 'Bewertungsgrundsätze',
+            'jd.policy.1': 'Ideen und Technologie werden gemeinsam bewertet, nicht isoliert',
+            'jd.policy.2': 'Ob es als Nutzererlebnis funktioniert, hat Priorität',
+            'jd.policy.3': 'Tiefe technische Arbeit ist nicht erforderlich, aber ein starker Bonusfaktor',
+            // Awards
+            'sec.awards': 'Auszeichnungen',
+            'aw.desc': 'Die Jury nimmt die abschließende Bewertung vor und bestimmt die Gewinner.',
+            'aw.1.title': 'Hauptpreis',
+            'aw.1.div': '1 Team oder Einzelperson',
+            'aw.1.desc': 'Verliehen an das Team oder die Einzelperson mit der höchsten Gesamtpunktzahl (Basispunktzahl + Technik-Bonus).',
+            'aw.2.title': 'Sonderpreis der Jury',
+            'aw.2.div': 'Einer pro Jurymitglied',
+            'aw.2.desc': 'Nach alleinigem Ermessen jedes Jurymitglieds gewählt. Unabhängig von der Gesamtpunktzahl geht er an das Werk, das das jeweilige Jurymitglied als „genau das“ empfunden hat.',
+            // Judges
+            'sec.judges': 'Jury',
+            'judge.1.name': 'Yusuke Kishimoto',
+            'judge.1.title': 'Leiter von Sapporo Sugoi AI-kai<br>AI Samurai',
+            'judge.1.comment': 'Wir leben in einer Zeit, in der KI es ermöglicht, Konzepte und Produkte auf der Stelle zu erschaffen. Ich kann es kaum erwarten zu sehen, welche Erlebnisse hier entstehen! Neulinge, Einsteiger und alte Hasen gleichermaßen – kommt und stellt euch der Herausforderung!',
+            'judge.2.name': 'Ryoma Kudo (Bonjiko)',
+            'judge.2.title': 'Stellvertretender Leiter von Sapporo Sugoi AI-kai',
+            'judge.2.comment': 'Von verblüffenden Ideen bis hin zu Erlebnissen, die die Herzen der Menschen berühren – ich freue mich auf Produkte aller Art! Lasst uns gemeinsam Spaß haben mit KI-gesteuerter Entwicklung, einer völlig neuen Art zu bauen!',
+            'judge.4.name': 'Kenichiro Nakajima',
+            'judge.4.title': 'NTT DATA MSE Corporation<br>Büro für Geschäftsstrategie<br>Abteilung KI-Strategie &amp; Planung',
+            'judge.4.comment': 'Ich freue mich wirklich sehr darauf, in Sapporo eine neue KI-Entwicklungskultur und eine neue Generation des Erschaffens entstehen zu sehen.<br>Ich hoffe, dass dies eine wunderbare Gelegenheit wird, bei der Studierende, Berufstätige und Unternehmen über Grenzen hinweg zusammenkommen, um sich der KI-gesteuerten Entwicklung zu stellen, und aus der viele Erkenntnisse und neue Verbindungen hervorgehen. NTT DATA MSE möchte solche Initiativen aus lokalen Communities auch weiterhin unterstützen.',
+            'judge.5.name': 'Hiroyuki Shoya',
+            'judge.5.title': 'HP Japan Inc.<br>Enterprise Sales<br>Solution Sales Division, Abteilung Workstation Business Development<br>Director, Marktentwicklung KI &amp; Data Science',
+            'judge.5.comment': 'Ein MVP (Minimum Viable Product) in nur zwei Stunden zu bauen, bedeutet vermutlich, mehrere KI-Agenten parallel an mehreren Spezifikationen, Implementierungen und Tests arbeiten zu lassen. Ich kann es kaum erwarten zu sehen, wie ihr alle – gestählt vom Land im Norden – die KI bis an ihre absoluten Grenzen treibt!',
+            'judge.3.name': 'Motoki Nakamura',
+            'judge.3.title': 'Staff bei Sapporo Sugoi AI-kai / Harness-Enthusiast<br>Der Typ, der Hokkaido mit KI in Schwung bringt',
+            'judge.3.comment': 'Ich erinnere mich noch daran, wie begeistert ich war, als beim ersten Programmieren-Lernen ein einziger Button funktionierte. Heute leben wir in einer Zeit, in der man eine App in wenigen Stunden bauen kann, indem man der KI einfach seine Idee erklärt. In einer so wunderbaren Zeit ist Nicht-Bauen schlicht keine Option. Ich kann es kaum erwarten, eure Ideen Gestalt annehmen zu sehen!',
+            // Entry CTA
+            'cta.title': 'Erschaffe eine Welt<br>in 2 Stunden.',
+            'cta.desc': 'Ingenieur, Designer oder blutiger Anfänger –<br>jeder, der etwas mit KI und Technologie bauen möchte, kann sich der Herausforderung stellen.',
+            'cta.btn.entry': 'Zum Anmeldeformular',
+            'cta.btn.discord': '💬 Auf Discord fragen',
+            // Organizer
+            'sec.organizer': 'Veranstalter',
+            'org.names': 'Veranstalter: Yusuke Kishimoto<br>— AI Samurai —<br>Leiter von Sapporo Sugoi AI-kai',
+            'org.bio': 'Eine Community mit Sitz in Sapporo, die eine Kultur des Lernens, Ausprobierens und Genießens von KI fördert. Durch regelmäßige Events und Study Sessions vergrößern wir die Zahl der Menschen, die KI wirklich beherrschen.',
+            'org.discord': '💬 Discord: Sapporo Sugoi AI-kai',
+            'org.mail': '✉️ Kontakt per E-Mail',
+            // Footer
+            'ft.logo': 'Sapporo Sugoi AI Hackathon Winter 2026',
+            'ft.l1': 'Übersicht',
+            'ft.l2': 'Ablauf',
+            'ft.l3': 'Zeitplan',
+            'ft.l4': 'Bewertung',
+            'ft.l5': 'Anmeldung',
+            'ft.l6': 'Bedingungen',
+            'ft.info1': 'Veranstalter: Sapporo Sugoi AI-kai',
+            'ft.info2': 'Veranstaltungsort: Deep Tech CORE SAPPORO',
+            'ft.festival': 'Dieses Event findet im Rahmen des Sapporo Sugoi AI Matsuri Winter 2026 statt.',
+            'ft.copy': '&copy; 2026 Sapporo Sugoi AI-kai Alle Rechte vorbehalten.',
+            'ft.disclaimer': '* Dieses Event wird von ehrenamtlichen Einzelpersonen durchgeführt und vertritt kein bestimmtes Unternehmen und keine kommerzielle Organisation.'
         }
     };
 
-    const HTML_LANG = { ja: 'ja', en: 'en', zh: 'zh-CN' };
+    const HTML_LANG = { ja: 'ja', en: 'en', zh: 'zh-CN', fr: 'fr', de: 'de' };
+    const LANG_CODE = { ja: 'JP', en: 'EN', zh: 'CN', fr: 'FR', de: 'DE' };
 
     let elements = [];
+
 
     function init() {
         // 日本語原文をDOMから保存（デフォルト表示は日本語）
@@ -456,6 +888,7 @@
                 setLang(btn.getAttribute('data-lang'));
             });
         });
+
     }
 
     function setLang(lang) {
@@ -476,10 +909,61 @@
         document.title = PAGE_TITLE[lang] || PAGE_TITLE.ja;
 
         document.querySelectorAll('.lang-btn').forEach(function (btn) {
-            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            const on = btn.getAttribute('data-lang') === lang;
+            btn.classList.toggle('active', on);
+            btn.setAttribute('aria-checked', on ? 'true' : 'false');
+        });
+        document.querySelectorAll('.lang-current').forEach(function (el) {
+            el.textContent = LANG_CODE[lang] || 'JP';
         });
     }
 
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+
+// ─── Language dropdown: open / close behaviour ───
+(function () {
+    'use strict';
+    function init() {
+        const switcher = document.getElementById('langSwitcher');
+        if (!switcher) return;
+        const toggle = switcher.querySelector('.lang-toggle');
+        const menu = switcher.querySelector('.lang-menu');
+        if (!toggle || !menu) return;
+
+        function open() {
+            switcher.classList.add('is-open');
+            toggle.setAttribute('aria-expanded', 'true');
+        }
+        function close() {
+            switcher.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        toggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (switcher.classList.contains('is-open')) { close(); } else { open(); }
+        });
+        menu.querySelectorAll('.lang-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                close();
+                toggle.focus();
+            });
+        });
+        document.addEventListener('click', function (e) {
+            if (!switcher.contains(e.target)) close();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && switcher.classList.contains('is-open')) {
+                close();
+                toggle.focus();
+            }
+        });
+    }
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {

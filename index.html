@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>札幌すごいAIハッカソン 2026夏 | AI駆動開発ハッカソン</title>
-    <meta name="description" content="2時間で、世界を作れ。思考→実装→発表を圧縮する実験場。AI駆動開発ハッカソン、2026年8月29日(土)札幌開催。">
+    <title>札幌すごいAIハッカソン 2026冬 | AI駆動開発ハッカソン</title>
+    <meta name="description" content="2時間で、世界を作れ。思考→実装→発表を圧縮する実験場。AI駆動開発ハッカソン、2026年12月5日(土)札幌開催。">
     <!-- OGP Tags -->
-    <meta property="og:title" content="札幌すごいAIハッカソン 2026夏">
-    <meta property="og:description" content="2時間で、世界を作れ。思考→実装→発表を圧縮する実験場。2026年8月29日(土)札幌開催。">
+    <meta property="og:title" content="札幌すごいAIハッカソン 2026冬">
+    <meta property="og:description" content="2時間で、世界を作れ。思考→実装→発表を圧縮する実験場。2026年12月5日(土)札幌開催。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hack-2026-summer.sugoiai.org/">
-    <meta property="og:site_name" content="札幌すごいAIハッカソン 2026夏">
-    <meta property="og:image" content="https://hack-2026-summer.sugoiai.org/images/logot.png">
+    <meta property="og:url" content="https://hack-2026-winter.sugoiai.org/">
+    <meta property="og:site_name" content="札幌すごいAIハッカソン 2026冬">
+    <meta property="og:image" content="https://hack-2026-winter.sugoiai.org/images/logot.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="ja_JP">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="札幌すごいAIハッカソン 2026夏">
+    <meta name="twitter:title" content="札幌すごいAIハッカソン 2026冬">
     <meta name="twitter:description" content="2時間で、世界を作れ。思考→実装→発表を圧縮する実験場。">
-    <meta name="twitter:image" content="https://hack-2026-summer.sugoiai.org/images/logot.png">
+    <meta name="twitter:image" content="https://hack-2026-winter.sugoiai.org/images/logot.png">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logot.png">
     <link rel="apple-touch-icon" href="images/logot.png">
@@ -32,11 +32,20 @@
 
     <!-- ─── HERO ─── -->
     <section id="hero" class="hero">
-        <!-- 言語切替（heroに対して絶対配置：スクロールすると一緒に流れて消える） -->
-        <div class="lang-switcher" id="langSwitcher" role="group" aria-label="Language">
-            <button type="button" class="lang-btn active" data-lang="ja">JP</button>
-            <button type="button" class="lang-btn" data-lang="en">EN</button>
-            <button type="button" class="lang-btn" data-lang="zh">CN</button>
+        <!-- 言語切替（heroに対して絶対配置：Languageボタン → プルダウン） -->
+        <div class="lang-switcher" id="langSwitcher">
+            <button type="button" class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Language">
+                <svg class="lang-toggle-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span class="lang-toggle-label">Language</span>
+                <svg class="lang-toggle-chevron" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="lang-menu" id="langMenu" role="menu" aria-label="Language">
+                <li role="none"><button type="button" class="lang-btn active" data-lang="ja" role="menuitemradio" aria-checked="true">日本語</button></li>
+                <li role="none"><button type="button" class="lang-btn" data-lang="en" role="menuitemradio" aria-checked="false">English</button></li>
+                <li role="none"><button type="button" class="lang-btn" data-lang="zh" role="menuitemradio" aria-checked="false">中文</button></li>
+                <li role="none"><button type="button" class="lang-btn" data-lang="fr" role="menuitemradio" aria-checked="false">Français</button></li>
+                <li role="none"><button type="button" class="lang-btn" data-lang="de" role="menuitemradio" aria-checked="false">Deutsch</button></li>
+            </ul>
         </div>
         <div class="hero-background">
             <div class="film-particle"></div>
@@ -44,11 +53,11 @@
             <div class="film-particle"></div>
         </div>
         <div class="container hero-content">
-            <div class="hero-date">2026.8.29</div>
+            <div class="hero-date">2026.12.5</div>
             <div class="hero-badge" data-i18n="hero.badge">参加エントリー受付中</div>
             <h1 class="hero-title">
-                <span class="title-main" data-i18n="hero.title">札幌すごいAIハッカソン<br>2026夏</span>
-                <span class="title-sub">Sapporo Sugoi AI Hackathon 2026 Summer</span>
+                <span class="title-main" data-i18n="hero.title">札幌すごいAIハッカソン<br>2026冬</span>
+                <span class="title-sub">Sapporo Sugoi AI Hackathon 2026 Winter</span>
             </h1>
             <p class="hero-tagline" data-i18n="hero.tagline">2時間で、世界を作れ。<br>AI駆動開発ハッカソン。</p>
             <div class="hero-info-badge">
@@ -69,6 +78,7 @@
     </section>
 
     <!-- ─── WINNERS ─── -->
+    <!-- 2026冬では非表示（受賞者情報）
     <section id="winners" class="section winners">
         <div class="container">
             <div class="section-header">
@@ -148,6 +158,7 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- ─── OVERVIEW ─── -->
     <section id="overview" class="section overview">
@@ -171,7 +182,7 @@
                         <div class="event-info">
                             <div class="info-item">
                                 <div class="info-label" data-i18n="ov.l1">開催日時</div>
-                                <div class="info-value" data-i18n="ov.v1">2026年8月29日（土）14:00〜18:00</div>
+                                <div class="info-value" data-i18n="ov.v1">2026年12月5日（土）14:00〜18:00</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label" data-i18n="ov.l2">会場</div>
@@ -260,26 +271,32 @@
             </div>
             <div class="partners-grid">
 
+                <!--
                 <a href="https://www.nttd-mse.com/" target="_blank" rel="noopener noreferrer" class="partner-card">
                     <div class="partner-logo">
                         <img src="images/NTTDMSE_logo.png" alt="株式会社NTTデータMSE">
                     </div>
                     <div class="partner-name" data-i18n="partners.nttdmse">株式会社NTTデータMSE</div>
                 </a>
+                -->
 
+                <!--
                 <a href="https://www.hp.com/jp-ja/home.html" target="_blank" rel="noopener noreferrer" class="partner-card">
                     <div class="partner-logo">
                         <img src="images/HP.png" alt="株式会社日本HP">
                     </div>
                     <div class="partner-name" data-i18n="partners.hp">株式会社日本HP</div>
                 </a>
+                -->
 
+                <!--
                 <a href="https://eques.co.jp" target="_blank" rel="noopener noreferrer" class="partner-card">
                     <div class="partner-logo">
                         <img src="images/eques.png" alt="株式会社EQUES">
                     </div>
                     <div class="partner-name" data-i18n="partners.eques">株式会社EQUES</div>
                 </a>
+                -->
 
                 <!--
                 <a href="https://eques.co.jp/" target="_blank" rel="noopener noreferrer" class="partner-card">
@@ -297,6 +314,7 @@
                     <div class="partner-name" data-i18n="partners.dtc">DTC株式会社</div>
                 </a>
 
+                <!--
                 <a href="https://hanamii.jp" target="_blank" rel="noopener noreferrer" class="partner-card">
                     <div class="partner-logo">
                         <img src="images/hanamii.png" alt="hanamii">
@@ -307,13 +325,16 @@
                           onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); event.stopPropagation(); window.open('images/hanamii.pdf', '_blank', 'noopener'); }"
                           data-i18n="partners.hanamiiDoc">使い方のダウンロード</span>
                 </a>
+                -->
 
+                <!--
                 <div class="partner-card">
                     <div class="partner-logo">
                         <span class="partner-logo-text" data-i18n="partners.sapporoLogo">札幌市</span>
                     </div>
                     <div class="partner-name" data-i18n="partners.sapporo">後援：札幌市</div>
                 </div>
+                -->
 
                 <!--
                 <a href="https://www.ai-driven.dev/ai駆動開発コンソーシアム/" target="_blank" rel="noopener noreferrer" class="partner-card">
@@ -779,7 +800,6 @@
                     </div>
                 </div>
 
-                <!--
                 <div class="judge-card">
                     <div class="judge-image-wrap">
                         <img src="images/bonjiko.png" alt="工藤僚馬(ぼんじこ)" class="judge-image">
@@ -793,9 +813,9 @@
                         <p class="judge-comment" data-i18n="judge.2.comment">あっと驚く発想から、人の心に寄り添う体験まで、いろんなプロダクトとの出会いを楽しみにしています！AI駆動開発という新たな手法を駆使して、みんなで楽しくやりましょう！</p>
                     </div>
                 </div>
-                -->
 
 
+                <!--
                 <div class="judge-card">
                     <div class="judge-image-wrap">
                         <img src="images/nakajimasan.png" alt="中島憲一郎" class="judge-image">
@@ -810,6 +830,7 @@
 学生・社会人・企業が垣根を越えて集まり、AI駆動開発に挑戦することで、多くの学びと新しいつながりが生まれる素晴らしい機会になることを期待しています。NTTデータMSEとしても、こうした地域コミュニティの挑戦を応援していきたいと思います。</p>
                     </div>
                 </div>
+                -->
 
                 <!--
                 <div class="judge-card">
@@ -824,6 +845,7 @@
                 </div>
                 -->
 
+                <!--
                 <div class="judge-card">
                     <div class="judge-image-wrap">
                         <img src="images/shoya.jpg" alt="勝谷裕史" class="judge-image">
@@ -837,6 +859,7 @@
                         <p class="judge-comment" data-i18n="judge.5.comment">たった2時間でMVP（Minimum Viable Product：実用最小限の製品）を実装するとなるとおそらく複数のAIエージェントに複数の仕様、実装、テストを並行して実行させることになると思います。北の大地に鍛えられたであろう皆さんのAIをとことん使いこなす姿をぜひ拝見させていただきます！</p>
                     </div>
                 </div>
+                -->
 
                 <div class="judge-card">
                     <div class="judge-image-wrap">
@@ -917,8 +940,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3 data-i18n="ft.logo">札幌すごいAIハッカソン 2026夏</h3>
-                    <p>Sapporo Sugoi AI Hackathon 2026 Summer</p>
+                    <h3 data-i18n="ft.logo">札幌すごいAIハッカソン 2026冬</h3>
+                    <p>Sapporo Sugoi AI Hackathon 2026 Winter</p>
                 </div>
                 <div class="footer-links">
                     <a href="#overview" data-i18n="ft.l1">開催概要</a>
@@ -935,7 +958,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-festival" data-i18n="ft.festival">本イベントは「札幌すごいAIまつり 2026夏」の一環として開催されます。</p>
+                <p class="footer-festival" data-i18n="ft.festival">本イベントは「札幌すごいAIまつり 2026冬」の一環として開催されます。</p>
                 <p data-i18n="ft.copy">&copy; 2026 札幌すごいAI会 All rights reserved.</p>
                 <p class="footer-disclaimer" data-i18n="ft.disclaimer">※本イベントは個人有志による活動であり、特定の企業・営利団体を代表するものではありません。</p>
                 <p class="footer-hashtag">#札幌すごいAIハッカソン</p>
