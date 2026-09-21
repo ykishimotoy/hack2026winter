@@ -2202,6 +2202,23 @@ body {
     margin-right: auto;
 }
 
+.partners-recruit {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.partners-recruit a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.partners-recruit a:hover {
+    color: var(--film-yellow, #FFD600);
+}
+
 .partner-card {
     background: var(--dark-elevated);
     border-radius: 12px;

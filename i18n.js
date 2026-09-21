@@ -59,7 +59,7 @@
             'ov.l5': 'Team Size',
             'ov.v5': '1–4 people (solo entry welcome)',
             'ov.l6': 'Entry',
-            'ov.v6': 'Sign up via the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">entry form</a>',
+            'ov.v6': 'Sign up via the <a href="https://docs.google.com/forms/d/e/1FAIpQLSe87TFu5_Q_sEgNIikcualxOHdBWwz_jdZEjOpgBoIpTAfbEw/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">entry form</a>',
             // About
             'sec.about': 'About This Event',
             'about.quote': 'What do you choose, and what do you cut, under constraints?<br>That decision-making itself becomes value.<span class="about-origin-sig">Core message of the AI-Driven Development Hackathon</span>',
@@ -79,6 +79,8 @@
             'partners.hanamiiDoc': 'Download User Guide',
             'partners.sapporoLogo': 'City of Sapporo',
             'partners.sapporo': 'Supported by the City of Sapporo',
+            'partners.aiddsapporo': 'AI-Driven Development Study Group, Sapporo Chapter',
+            'partners.recruit': 'For sponsorship inquiries, click here',
             // Flow
             'sec.flow': 'Event Flow',
             'flow.desc': 'Everything happens in one day — from check-in to awards, here is how it flows.',
@@ -273,7 +275,7 @@
             'ov.l5': '团队人数',
             'ov.v5': '1〜4人（可个人参加）',
             'ov.l6': '报名',
-            'ov.v6': '请通过<a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">报名表</a>报名',
+            'ov.v6': '请通过<a href="https://docs.google.com/forms/d/e/1FAIpQLSe87TFu5_Q_sEgNIikcualxOHdBWwz_jdZEjOpgBoIpTAfbEw/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">报名表</a>报名',
             // About
             'sec.about': '关于本活动',
             'about.quote': '在制约之中选择什么、舍弃什么。<br>这种决策本身，就是价值。<span class="about-origin-sig">AI驱动开发黑客松 核心理念</span>',
@@ -293,6 +295,8 @@
             'partners.hanamiiDoc': '下载使用指南',
             'partners.sapporoLogo': '札幌市',
             'partners.sapporo': '后援：札幌市',
+            'partners.aiddsapporo': 'AI驱动开发学习会 札幌分会',
+            'partners.recruit': '关于赞助商招募，请点击此处',
             // Flow
             'sec.flow': '体验流程',
             'flow.desc': '当天完结。从签到到颁奖，按以下流程进行。',
@@ -487,7 +491,7 @@
             'ov.l5': 'Taille de l’équipe',
             'ov.v5': '1 à 4 personnes (participation en solo bienvenue)',
             'ov.l6': 'Inscription',
-            'ov.v6': 'Inscrivez-vous via le <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">formulaire d’inscription</a>',
+            'ov.v6': 'Inscrivez-vous via le <a href="https://docs.google.com/forms/d/e/1FAIpQLSe87TFu5_Q_sEgNIikcualxOHdBWwz_jdZEjOpgBoIpTAfbEw/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">formulaire d’inscription</a>',
             // About
             'sec.about': 'À propos de l’événement',
             'about.quote': 'Sous contraintes, que choisissez-vous et que laissez-vous de côté ?<br>Cette prise de décision devient elle-même une valeur.<span class="about-origin-sig">Message central du hackathon de développement piloté par l’IA</span>',
@@ -507,6 +511,8 @@
             'partners.hanamiiDoc': 'Télécharger le guide d’utilisation',
             'partners.sapporoLogo': 'Ville de Sapporo',
             'partners.sapporo': 'Avec le soutien de la Ville de Sapporo',
+            'partners.aiddsapporo': 'Groupe d’étude du développement piloté par l’IA – section de Sapporo',
+            'partners.recruit': 'Devenir sponsor : plus d’informations ici',
             // Flow
             'sec.flow': 'Déroulement de l’événement',
             'flow.desc': 'Tout se passe en une journée : de l’accueil à la remise des prix, voici comment cela se déroule.',
@@ -701,7 +707,7 @@
             'ov.l5': 'Teamgröße',
             'ov.v5': '1–4 Personen (Einzelteilnahme willkommen)',
             'ov.l6': 'Anmeldung',
-            'ov.v6': 'Anmeldung über das <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhWkil78gUpK0d7_SPnkIp2VBaLrS5ejBDSna8Zs11sMa4Dg/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">Anmeldeformular</a>',
+            'ov.v6': 'Anmeldung über das <a href="https://docs.google.com/forms/d/e/1FAIpQLSe87TFu5_Q_sEgNIikcualxOHdBWwz_jdZEjOpgBoIpTAfbEw/viewform" target="_blank" rel="noopener noreferrer" class="guideline-link">Anmeldeformular</a>',
             // About
             'sec.about': 'Über dieses Event',
             'about.quote': 'Was wählst du, und was lässt du weg – unter Einschränkungen?<br>Diese Entscheidung selbst wird zum Wert.<span class="about-origin-sig">Kernbotschaft des Hackathons für KI-gesteuerte Entwicklung</span>',
@@ -721,6 +727,8 @@
             'partners.hanamiiDoc': 'Benutzerhandbuch herunterladen',
             'partners.sapporoLogo': 'Stadt Sapporo',
             'partners.sapporo': 'Mit Unterstützung der Stadt Sapporo',
+            'partners.aiddsapporo': 'AI-gestützte Entwicklung Study Group – Sektion Sapporo',
+            'partners.recruit': 'Informationen zum Sponsoring finden Sie hier',
             // Flow
             'sec.flow': 'Ablauf des Events',
             'flow.desc': 'Alles passiert an einem Tag – vom Check-in bis zur Preisverleihung, so läuft es ab.',
